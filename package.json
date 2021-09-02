@@ -1,0 +1,19 @@
+{
+  "name": "itechartfinalproject",
+  "version": "1.0.0",
+  "description": "Final project of itechart lab",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Noway2win/finalItechArtInteshipProject.git"
+  },
+  "author": "Satsukevich Dzmitry",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Noway2win/finalItechArtInteshipProject/issues"
+  },
+  "homepage": "https://github.com/Noway2win/finalItechArtInteshipProject#readme"
+}
