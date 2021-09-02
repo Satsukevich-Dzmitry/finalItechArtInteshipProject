@@ -1,0 +1,8 @@
+.section_title{
+	@include NunitoFont(36px);
+	text-align: center;
+	padding-bottom: 36px;
+}
+.color-focus{
+	background-color: $yellow;
+}

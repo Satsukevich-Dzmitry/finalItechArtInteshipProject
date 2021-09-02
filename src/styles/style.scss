@@ -1,0 +1,25 @@
+@import 'reset';
+@import 'vars/colors';
+@import 'vars/vars';
+@import 'vars/mixins';
+@import 'common/commonStyles';
+@import 'common/cookBook';
+@import 'headerAndFooter/header';
+@import 'headerAndFooter/footer';
+@import 'mainPage/mainSection.scss';
+@import 'mainPage/banner';
+@import 'mainPage/popularCookbook.scss';
+@import 'mainPage/pickedArticles.scss';
+@import 'mainPage/trandingRecepies.scss';
+
+
+body {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: $backgroundColor;
+}
+
+#root {
+	width: 100%;
+}

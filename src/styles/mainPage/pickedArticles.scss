@@ -1,0 +1,42 @@
+.picked-articles{
+	width: 1100px;
+	display: grid;
+	grid-template: "a a b b" 255px
+		"a a c d" 255px / 1fr 1fr 1fr 1fr;
+	gap: 30px;
+	& div:nth-child(1){
+		grid-area: a;
+	}
+	& div:nth-child(2){
+		grid-area: b;
+	}
+	& div:nth-child(3){
+		grid-area: c;
+	}
+	& div:nth-child(4){
+		grid-area: d;
+	}
+}
+.picked-article-item{
+	background-color: $yellow;
+	position: relative;
+	border-radius: 8px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: flex-start;
+	padding:20px;
+	& img{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		object-fit: cover;
+	}
+	&_text{
+		background-color: $white;
+		border-radius: 4px;
+		padding: 7px 10px 8px;
+		@include NunitoFont(26px, $black, 600);
+	}
+}
