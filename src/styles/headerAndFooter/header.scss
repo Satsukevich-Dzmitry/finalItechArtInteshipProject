@@ -39,6 +39,9 @@
 
 	&_link {
 		@include NunitoFont(16px, $black, 400);
+		&__white{
+			color: $white;
+		}
 	}
 
 	&_seach-input {

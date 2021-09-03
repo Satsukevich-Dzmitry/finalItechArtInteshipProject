@@ -1,20 +1,31 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default function Header(props) {
 	return (
 		<header className="header">
 			<div className="header_content">
-			<a href='/' className="header_title">Feed<span>me</span></a>
-			<nav className="navbar">
-				<a className='navbar_link' href='#'>Cookbooks</a>
-				<a className='navbar_link' href='#'>Recepts</a>
-				<input type="text" className="navbar_seach-input" />
-			</nav>
-		<section className='auth-section'>
-			<a href='#' className='auth-section_link'>Sign in</a>
-			<a href='#' className='auth-section_link'>Sign up</a>
-		</section>
-		</div>
+				<Link to="/" className="header_title">
+					Feed<span>me</span>
+				</Link>
+				<nav className="navbar">
+					<Link className="navbar_link" to="/search/cookBooks">
+						Cookbooks
+					</Link>
+					<Link className="navbar_link" to="/search/recepies">
+						Recepts
+					</Link>
+					<input type="text" className="navbar_seach-input" />
+				</nav>
+				<section className="auth-section">
+					<Link to="/" className="auth-section_link">
+						Sign in
+					</Link>
+					<Link to="/" className="auth-section_link">
+						Sign up
+					</Link>
+				</section>
+			</div>
 		</header>
-	)
+	);
 }

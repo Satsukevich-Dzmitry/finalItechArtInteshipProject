@@ -1,4 +1,36 @@
 .footer{
 	background-color: $black;
 	height: 90px;
+	display: flex;
+	box-sizing: border-box;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	min-width: 1110px;
+	&_content {
+		display: flex;
+		box-sizing: border-box;
+		flex-direction: row;
+		align-items: flex-end;
+		justify-content: space-between;
+		width: 1100px;
+	}
+	&_title {
+		@include NunitoFont(24px, $white, bold);
+		flex-grow: 1;
+
+		&>span {
+			color: $yellow;
+		}
+	}
+	&_info{
+		height: 100%;
+		text-align: right;
+		flex-grow: 1;
+		& > p{
+			line-height: 24px;
+			@include NunitoFont(16px, $white, normal);
+		}
+	}
 }

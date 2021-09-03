@@ -6,11 +6,12 @@
 @import 'common/cookBook';
 @import 'headerAndFooter/header';
 @import 'headerAndFooter/footer';
-@import 'mainPage/mainSection.scss';
+@import 'mainPage/mainSection';
 @import 'mainPage/banner';
-@import 'mainPage/popularCookbook.scss';
-@import 'mainPage/pickedArticles.scss';
-@import 'mainPage/trandingRecepies.scss';
+@import 'mainPage/popularCookbook';
+@import 'mainPage/pickedArticles';
+@import 'mainPage/trandingRecepies';
+@import 'search/searchSection';
 
 
 body {

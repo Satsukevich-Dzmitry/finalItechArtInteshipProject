@@ -1,17 +1,18 @@
 import React from 'react';
-import cookBookImage from '../../../../images/mostPopularCookbook.png';
 
 export default function CookBook(props) {
+	const { cookBook } = props;
+	const { title, author, views, likes, comments, img } = cookBook;
 	return (
-		<div className="cook-book">
-			<span className="cook-book_metrics">👁12000 views</span>
-			<img className="cook-book_img" src={cookBookImage} alt="CookBook" />
-			<h4 className="cook-book_title">Fresh meat</h4>
-			<p className="cook-book_author">John Doe</p>
+		<article className="cook-book">
+			<span className="cook-book_metrics">👁{views} views</span>
+			<img className="cook-book_img" src={img} alt="CookBook" />
+			<h4 className="cook-book_title">{title}</h4>
+			<p className="cook-book_author">{author}</p>
 			<div className="cook-book_likes">
-				<span className="cook-book_metrics"> &#9825; 499 likes</span>
-				<span className="cook-book_metrics">💬 12 comments</span>
+				<span className="cook-book_metrics"> &#9825; {likes} likes</span>
+				<span className="cook-book_metrics">💬 {comments} comments</span>
 			</div>
-		</div>
+		</article>
 	);
 }

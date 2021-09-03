@@ -1,0 +1,50 @@
+{
+	"cookbooks": [
+		{
+			"id": 1,
+			"title": "Fresh meat",
+			"author": "John Doe",
+			"views": 12000,
+			"likes": 499,
+			"comments": 12,
+			"img": "./images/mostPopularCookbook.png"
+		},
+		{
+			"id": 2,
+			"title": "Fresh meat",
+			"author": "John Doe",
+			"views": 12001,
+			"likes": 499,
+			"comments": 12,
+			"img": "./images/mostPopularCookbook.png"
+		},
+		{
+			"id": 3,
+			"title": "Fresh meat",
+			"author": "John Doe",
+			"views": 12002,
+			"likes": 499,
+			"comments": 12,
+			"img": "./images/mostPopularCookbook.png"
+		},
+		{
+			"id": 4,
+			"title": "Fresh meat",
+			"author": "John Doe",
+			"views": 12003,
+			"likes": 499,
+			"comments": 12,
+			"img": "./images/mostPopularCookbook.png"
+		}
+	],
+	"comments": [
+		{
+			"id": 1,
+			"body": "some comment",
+			"postId": 1
+		}
+	],
+	"profile": {
+		"name": "typicode"
+	}
+}
