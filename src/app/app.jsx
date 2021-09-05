@@ -1,35 +1,23 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
 import MainPage from './components/mainPage/mainPage';
 import Header from './components/headerAndFooter/header';
 import Footer from './components/headerAndFooter/footer';
 import Search from './components/search/search';
-import getData from './services/getData';
+import { fetchBooksRequest } from './redux/actionCreators/booksActions';
 
-export default function App(props) {
-	const [cookBooks, setBooks] = useState([
-		{
-			id: 1,
-			title: 'Fresh meat',
-			author: 'John Doe',
-			views: 12000,
-			likes: 499,
-			comments: 12,
-			img: './images/mostPopularCookbook.png',
-		},
-	]);
-	useEffect(async () => {
-		setBooks(await getData());
-	}, []);
+export default function App() {
+	const dispatch = useDispatch();
+
+	useEffect(() => {
+		dispatch(fetchBooksRequest());
+	}, [dispatch]);
+
 	return (
 		<Router>
 			<Header />
-			<Route
-				exact
-				path="/"
-				render={(props) => <MainPage cookBooks={cookBooks} />}
-				cookBooks={cookBooks}
-			/>
+			<Route exact path="/" component={MainPage} />
 			{/* <Route
 				patch="search/"
 				render={(props) => <Search cookBooks={cookBooks} />}

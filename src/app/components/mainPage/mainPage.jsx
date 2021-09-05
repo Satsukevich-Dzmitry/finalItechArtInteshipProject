@@ -5,14 +5,12 @@ import PickedArticles from './pickedArticles';
 import MainSection from './mainSection';
 import TrandingRecepies from './trandingRecepies';
 
-export default function MainPage(props) {
-	const { cookBooks } = props;
-
+export default function MainPage() {
 	return (
 		<main>
 			<Banner />
 			<MainSection title="Most Popular Cookbooks" link="/search/cookBook">
-				<PopularCookBooks cookBooks={cookBooks} />
+				<PopularCookBooks />
 			</MainSection>
 			<MainSection title="Picked By Us" link="/search/recepies">
 				<PickedArticles />
