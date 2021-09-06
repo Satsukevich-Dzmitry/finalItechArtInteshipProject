@@ -63,3 +63,36 @@
 		}
 	}
 }
+.password-restore-link{
+	@include NunitoFont(16px, $lightGrey, 600);
+	display: block;
+	align-self: center;
+	&:hover{
+		text-decoration: underline;
+		text-decoration-color: $lightGrey;
+	}
+}
+@mixin authPage($bgImg:'../../images/logInImg.png', $bgColor: #fff, $bgPos:'right', $innerDivPos: flex-start){
+	background-image: url($bgImg);
+	min-height: 900px;
+	background-repeat: no-repeat;
+	background-position: $bgPos;
+	background-color: $bgColor;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	&>div{
+		width:1100px;
+		display:flex;
+		justify-content: $innerDivPos;
+		align-items: center;
+	}
+}
+
+.login-section{
+	@include authPage($bgImg: '../../images/logInImg.png', $bgColor: $loginBg, $innerDivPos: flex-start);
+}
+.signup-section{
+	@include authPage($bgImg: '../../images/signUpImg.png', $bgColor: $signupBg, $bgPos:'right', $innerDivPos: flex-end);
+}

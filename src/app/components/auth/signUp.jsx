@@ -3,9 +3,10 @@ import AuthForm from './authForm';
 
 export default function SignUp() {
 	return (
-		<section>
-			SignUp
-			<AuthForm />
+		<section className="signup-section">
+			<div>
+				<AuthForm />
+			</div>
 		</section>
 	);
 }

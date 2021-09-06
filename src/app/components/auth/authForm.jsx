@@ -10,9 +10,11 @@ export default function AuthForm(props) {
 	const { logIn } = props;
 	const history = useHistory();
 	const dispatch = useDispatch();
+
 	function handleSubmit() {
 		history.push('/');
 	}
+
 	const validationSchemaFormik = logIn
 		? Yup.object({
 				email: Yup.string().email('Invalid email address').required('Required'),
@@ -33,6 +35,7 @@ export default function AuthForm(props) {
 					.min(8, 'Password must be at least 8 characters long')
 					.required('Required'),
 		  });
+
 	const FormMessage = logIn ? (
 		<p className="auth-section_message">
 			WelcomeBack
@@ -52,6 +55,7 @@ export default function AuthForm(props) {
 			</span>
 		</p>
 	);
+
 	return (
 		<section className="auth-section">
 			<h2 className="auth-section_title">
@@ -59,11 +63,13 @@ export default function AuthForm(props) {
 			</h2>
 			{FormMessage}
 			<Formik
-				initialValues={{ email: '', password: '' }}
+				initialValues={{ email: '', password: '', confirmPassword: '' }}
 				validationSchema={validationSchemaFormik}
 				onSubmit={async (values, { setSubmitting }) => {
 					const url = logIn ? 'login' : 'register';
-					const payload = await fetchUsers(url, values);
+					const { email, password } = values;
+					const fetchBody = { email, password };
+					const payload = await fetchUsers(url, fetchBody);
 					dispatch(USER_LOGGED(payload));
 					handleSubmit();
 					setSubmitting(false);
@@ -72,7 +78,12 @@ export default function AuthForm(props) {
 				{(formik) => (
 					<form className="auth-form" onSubmit={formik.handleSubmit}>
 						<label htmlFor="email">Email Address</label>
-						<input id="email" type="email" {...formik.getFieldProps('email')} />
+						<input
+							id="email"
+							type="email"
+							autoComplete="on"
+							{...formik.getFieldProps('email')}
+						/>
 						{formik.touched.email && formik.errors.email ? (
 							<div>{formik.errors.email}</div>
 						) : null}
@@ -81,6 +92,7 @@ export default function AuthForm(props) {
 						<input
 							id="password"
 							type="password"
+							autoComplete="on"
 							{...formik.getFieldProps('password')}
 						/>
 						{formik.touched.password && formik.errors.password ? (
@@ -93,6 +105,7 @@ export default function AuthForm(props) {
 								<input
 									id="confirmPassword"
 									type="password"
+									autoComplete="on"
 									{...formik.getFieldProps('confirmPassword')}
 								/>
 								{formik.touched.confirmPassword &&
@@ -106,29 +119,9 @@ export default function AuthForm(props) {
 					</form>
 				)}
 			</Formik>
-			{/* <form action="">
-				<div>
-					<label htmlFor="auth-email">Email</label>
-					<input id="auth-email" name="auth-email" type="email" />
-				</div>
-				<div>
-					<label htmlFor="auth-password">Password</label>
-					<input id="auth-password" name="auth-password" type="email" />
-				</div>
-				{logIn ? null : (
-					<div>
-						<label htmlFor="auth-password-confirm">Confirm Password</label>
-						<input
-							id="auth-password-confirm"
-							name="auth-password-confirm"
-							type="email"
-						/>
-					</div>
-				)}
-				<button className="" type="submit">
-					{logIn ? 'Sign In' : 'Sign Up'}
-				</button>
-			</form> */}
+			<Link className="password-restore-link" to="/">
+				Forgot password?
+			</Link>
 		</section>
 	);
 }

@@ -3,12 +3,14 @@ import Banner from './banner';
 import PopularCookBooks from './popularCookBooks';
 import PickedArticles from './pickedArticles';
 import MainSection from './mainSection';
+import ChangePasswordForm from '../auth/changePassword';
 import TrandingRecepies from './trandingRecepies';
 
 export default function MainPage() {
 	return (
 		<main>
 			<Banner />
+			<ChangePasswordForm />
 			<MainSection title="Most Popular Cookbooks" link="/search/cookBook">
 				<PopularCookBooks />
 			</MainSection>

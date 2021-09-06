@@ -21,7 +21,9 @@ export default function Header(props) {
 					<input type="text" className="navbar_seach-input" />
 				</nav>
 				{logged ? (
-					<p>{JSON.stringify(user)}</p>
+					<Link to="/" className="navbar-link">
+						{user.user.email}
+					</Link>
 				) : (
 					<section className="header_auth-section">
 						<Link to="/logIn" className="header_auth-section_link">
