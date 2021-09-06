@@ -1,50 +1,106 @@
 {
-	"cookbooks": [
-		{
-			"id": 1,
-			"title": "Fresh meat",
-			"author": "John Doe",
-			"views": 12000,
-			"likes": 499,
-			"comments": 12,
-			"img": "./images/mostPopularCookbook.png"
-		},
-		{
-			"id": 2,
-			"title": "Fresh meat",
-			"author": "John Doe",
-			"views": 12001,
-			"likes": 499,
-			"comments": 12,
-			"img": "./images/mostPopularCookbook.png"
-		},
-		{
-			"id": 3,
-			"title": "Fresh meat",
-			"author": "John Doe",
-			"views": 12002,
-			"likes": 499,
-			"comments": 12,
-			"img": "./images/mostPopularCookbook.png"
-		},
-		{
-			"id": 4,
-			"title": "Fresh meat",
-			"author": "John Doe",
-			"views": 12003,
-			"likes": 499,
-			"comments": 12,
-			"img": "./images/mostPopularCookbook.png"
-		}
-	],
-	"comments": [
-		{
-			"id": 1,
-			"body": "some comment",
-			"postId": 1
-		}
-	],
-	"profile": {
-		"name": "typicode"
-	}
+  "cookbooks": [
+    {
+      "id": 1,
+      "title": "Fresh meat",
+      "author": "John Doe",
+      "views": 12000,
+      "likes": 499,
+      "comments": 12,
+      "img": "mostPopularCookbook.png"
+    },
+    {
+      "id": 2,
+      "title": "Fresh meat",
+      "author": "John Doe",
+      "views": 12001,
+      "likes": 499,
+      "comments": 12,
+      "img": "mostPopularCookbook.png"
+    },
+    {
+      "id": 3,
+      "title": "Fresh meat",
+      "author": "John Doe",
+      "views": 12002,
+      "likes": 499,
+      "comments": 12,
+      "img": "mostPopularCookbook.png"
+    },
+    {
+      "id": 4,
+      "title": "Fresh meat",
+      "author": "John Doe",
+      "views": 12003,
+      "likes": 499,
+      "comments": 12,
+      "img": "mostPopularCookbook.png"
+    }
+  ],
+  "recepies": [
+    {
+      "id": 1,
+      "title": "Fresh meat",
+      "author": "John Doe",
+      "views": 12000,
+      "likes": 499,
+      "comments": 12,
+      "img": "mostPopularCookbook.png"
+    },
+    {
+      "id": 2,
+      "title": "Fresh meat",
+      "author": "John Doe",
+      "views": 12001,
+      "likes": 499,
+      "comments": 12,
+      "img": "./images/mostPopularCookbook.png"
+    },
+    {
+      "id": 3,
+      "title": "Fresh meat",
+      "author": "John Doe",
+      "views": 12002,
+      "likes": 499,
+      "comments": 12,
+      "img": "./images/mostPopularCookbook.png"
+    },
+    {
+      "id": 4,
+      "title": "Fresh meat",
+      "author": "John Doe",
+      "views": 12003,
+      "likes": 499,
+      "comments": 12,
+      "img": "./images/mostPopularCookbook.png"
+    }
+  ],
+  "cookBookComments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "recepieComments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "users": [
+    {
+      "email": "test2@mail.com",
+      "password": "$2a$10$f/i9gp60f/zFlScbjfj.7Owk2pfyQHHGCJzUHdCjG9RW3YFlhyBo6",
+      "confirmPassword": "12345678",
+      "id": 1
+    },
+    {
+      "email": "hello@mail.com",
+      "password": "$2a$10$73TPWxB2xnxMBTi449Af7OuslQU.ved22mo14v.Jbms2Sndi4toGS",
+      "confirmPassword": "12345678",
+      "id": 2
+    }
+  ]
 }

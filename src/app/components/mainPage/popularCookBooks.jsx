@@ -3,9 +3,8 @@ import { useSelector } from 'react-redux';
 import CookBook from './cookBook';
 
 export default function PopularCookBooks() {
-	const books = useSelector(({ books }) => books);
-	console.log(books);
-	const cookBooksList = books.map((cookBook) => {
+	const allBooks = useSelector(({ books }) => books.allBooks);
+	const cookBooksList = allBooks.map((cookBook) => {
 		const { id } = cookBook;
 		return <CookBook key={id} cookBook={cookBook} />;
 	});

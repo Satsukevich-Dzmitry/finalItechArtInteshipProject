@@ -1,7 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 export default function Header(props) {
+	const user = useSelector((state) => state.user);
+	const { logged } = user;
 	return (
 		<header className="header">
 			<div className="header_content">
@@ -17,14 +20,18 @@ export default function Header(props) {
 					</Link>
 					<input type="text" className="navbar_seach-input" />
 				</nav>
-				<section className="auth-section">
-					<Link to="/" className="auth-section_link">
-						Sign in
-					</Link>
-					<Link to="/" className="auth-section_link">
-						Sign up
-					</Link>
-				</section>
+				{logged ? (
+					<p>{JSON.stringify(user)}</p>
+				) : (
+					<section className="header_auth-section">
+						<Link to="/logIn" className="header_auth-section_link">
+							Log In
+						</Link>
+						<Link to="/signUp" className="header_auth-section_link">
+							Sign up
+						</Link>
+					</section>
+				)}
 			</div>
 		</header>
 	);
