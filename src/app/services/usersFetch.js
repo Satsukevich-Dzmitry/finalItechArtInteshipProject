@@ -14,16 +14,20 @@ export default async function fetchUsers(url, payload) {
 
 }
 
+
 export async function changePassword(id, newPassword) {
-	const response = await fetch(`http://localhost:3000/users/${id}`, {
+	const credsResponse = await fetch(`http://localhost:3000/users/${id}`, {
 		method: 'PATCH',
 		headers: {
 			'content-type': 'application/json',
 		},
 		body: JSON.stringify({ password: newPassword }),
 	});
-	const data = await response.json();
-	return data;
+	const credentials = await credsResponse.json();
+	const { email } = credentials;
+	const payload = { email, password: newPassword };
+	const response = await fetchUsers('login', payload);
+	return response;
 }
 
 export async function restorePassword(email, newPassword) {

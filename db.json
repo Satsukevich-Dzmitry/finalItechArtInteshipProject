@@ -122,6 +122,11 @@
       "email": "inputTest@mail.com",
       "password": "$2a$10$ZEbetLPbcchnckpxM/pvzeItFEc/4WFNnsLiW/Uv/ctcAFCc5kLK.",
       "id": 6
+    },
+    {
+      "email": "fix@mail.com",
+      "password": "$2a$10$xiPNXXtMKNMTxymG2siUjOJ/rHNXfQK4litb1uxgwE5WQnU216ma.",
+      "id": 7
     }
   ]
 }

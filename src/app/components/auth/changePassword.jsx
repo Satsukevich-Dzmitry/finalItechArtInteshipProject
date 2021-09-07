@@ -3,7 +3,7 @@ import { Link, useHistory } from 'react-router-dom';
 import { Formik } from 'formik';
 import { useSelector, useDispatch } from 'react-redux';
 import * as Yup from 'yup';
-import { USER_PASSWORD_RESTORED } from '../../redux/userSlice/userSlice';
+import { USER_LOGGED } from '../../redux/userSlice/userSlice';
 import { changePassword, restorePassword } from '../../services/usersFetch';
 
 export default function ChangePasswordForm() {
@@ -55,18 +55,18 @@ export default function ChangePasswordForm() {
 					if (logged) {
 						const { id } = user;
 						const { password } = values;
-						changePassword(id, password);
+						const payload = await changePassword(id, password);
+						dispatch(USER_LOGGED(payload));
 					} else {
 						const { email, password } = values;
 						const payload = await restorePassword(email, password);
-						dispatch(USER_PASSWORD_RESTORED(payload));
-						handleSubmit();
+						dispatch(USER_LOGGED(payload));
 					}
 					// const { email, password } = values;
 					// const fetchBody = { email, password };
 					// const payload = await fetchUsers(url, fetchBody);
 					// dispatch(USER_LOGGED(payload));
-					// handleSubmit();
+					handleSubmit();
 					setSubmitting(false);
 					resetForm();
 				}}
