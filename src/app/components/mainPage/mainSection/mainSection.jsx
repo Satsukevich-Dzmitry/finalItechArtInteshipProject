@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-export default function MainSection(props) {
+const MainSection = (props) => {
 	const { title, children, focus, link } = props;
 	return (
 		<section className={`main-section ${focus ? 'color-focus' : ''}`}>
@@ -11,4 +11,5 @@ export default function MainSection(props) {
 			{children}
 		</section>
 	);
-}
+};
+export default MainSection;

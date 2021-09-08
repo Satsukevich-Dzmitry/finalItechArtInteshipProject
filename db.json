@@ -92,13 +92,13 @@
   "users": [
     {
       "email": "test2@mail.com",
-      "password": "$2a$10$Tdd.dGk8u/EBFwWHDtPye.xy6U.v.bBOL24xnoTcBfsz6G6/k5IXi",
+      "password": "$2a$10$aMG0FQcwYuyZ4eQf4ulUi.L4NcXeLiBdfJBdEUozCwo86aQXazngu",
       "confirmPassword": "1234567890",
       "id": 1
     },
     {
       "email": "hello@mail.com",
-      "password": "$2a$10$73TPWxB2xnxMBTi449Af7OuslQU.ved22mo14v.Jbms2Sndi4toGS",
+      "password": "$2a$10$18/mHGLG6D4Mr1F0l62In.32b1igd3raclA/dLmhY/ak5Xxv1HS0u",
       "confirmPassword": "12345678",
       "id": 2
     },
@@ -127,6 +127,16 @@
       "email": "fix@mail.com",
       "password": "$2a$10$xiPNXXtMKNMTxymG2siUjOJ/rHNXfQK4litb1uxgwE5WQnU216ma.",
       "id": 7
+    },
+    {
+      "email": "dsadaw@cacaca.com",
+      "password": "$2a$10$6dUMnyydRAZoj880UvvsPeuteGHK2ZtQyKhfzxqCaFTGSgZKiDyPi",
+      "id": 8
+    },
+    {
+      "email": "dimamoving@yandex.by",
+      "password": "$2a$10$dO5cvMAhyJRBP1jIaxKG8unxo4xV1sqpkUxEnkmry7E6j6qW6P7cC",
+      "id": 9
     }
   ]
 }

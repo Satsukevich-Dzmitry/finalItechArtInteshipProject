@@ -1,0 +1,3 @@
+.login-section{
+	@include authPage($bgImg: '../../images/logInImg.png', $bgColor: $loginBg, $innerDivPos: flex-start);
+}

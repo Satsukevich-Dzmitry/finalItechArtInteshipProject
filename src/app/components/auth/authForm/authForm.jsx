@@ -2,78 +2,46 @@ import React from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import { Formik } from 'formik';
 import { useDispatch } from 'react-redux';
-import * as Yup from 'yup';
-import { USER_LOGGED } from '../../redux/userSlice/userSlice';
-import fetchUsers from '../../services/usersFetch';
+import { USER_LOGGED, USER_LOGGING } from '../../../redux/userSlice/userSlice';
+import fetchUsers from '../../../services/usersFetch';
+import AuthSectionMessage from '../authSectionMessage/authSectionMessage';
+import {
+	userLoginValidation,
+	userSignInValidation,
+} from '../../../validations/userAuthValidation';
 
-export default function AuthForm(props) {
+const AuthForm = (props) => {
 	const { logIn } = props;
 	const history = useHistory();
 	const dispatch = useDispatch();
 
-	function handleSubmit() {
+	const handleSubmit = () => {
 		history.push('/');
-	}
+	};
+
+	const onFormSubmit = async (values, { setSubmitting }) => {
+		const url = logIn ? 'login' : 'register';
+		const { email, password } = values;
+		const payload = { url, email, password };
+		dispatch(USER_LOGGING(payload));
+		handleSubmit();
+		setSubmitting(false);
+	};
 
 	const validationSchemaFormik = logIn
-		? Yup.object({
-				email: Yup.string().email('Invalid email address').required('Required'),
-				password: Yup.string()
-					.min(8, 'Password must be at least 8 characters long')
-					.required('Required'),
-				confirmPassword: Yup.string().when('password', {
-					is: (val) => !!(val && val.length > 0),
-					then: Yup.string().oneOf(
-						[Yup.ref('password')],
-						'Both password need to be the same'
-					),
-				}),
-		  })
-		: Yup.object({
-				email: Yup.string().email('Invalid email address').required('Required'),
-				password: Yup.string()
-					.min(8, 'Password must be at least 8 characters long')
-					.required('Required'),
-		  });
-
-	const FormMessage = logIn ? (
-		<p className="auth-section_message">
-			WelcomeBack
-			<br />
-			<span>New here?</span>
-			<span>
-				<Link to="/signUp">Create account</Link>
-			</span>
-		</p>
-	) : (
-		<p className="auth-section_message">
-			Join Our community
-			<br />
-			<span>already have an account?</span>
-			<span>
-				<Link to="/logIn">Sign In</Link>
-			</span>
-		</p>
-	);
+		? userLoginValidation
+		: userSignInValidation;
 
 	return (
 		<section className="auth-section">
 			<h2 className="auth-section_title">
 				Feed<span>Me</span>
 			</h2>
-			{FormMessage}
+			<AuthSectionMessage logIn />
 			<Formik
 				initialValues={{ email: '', password: '', confirmPassword: '' }}
 				validationSchema={validationSchemaFormik}
-				onSubmit={async (values, { setSubmitting }) => {
-					const url = logIn ? 'login' : 'register';
-					const { email, password } = values;
-					const fetchBody = { email, password };
-					const payload = await fetchUsers(url, fetchBody);
-					dispatch(USER_LOGGED(payload));
-					handleSubmit();
-					setSubmitting(false);
-				}}
+				onSubmit={onFormSubmit}
 			>
 				{(formik) => (
 					<form className="auth-form" onSubmit={formik.handleSubmit}>
@@ -85,7 +53,7 @@ export default function AuthForm(props) {
 							{...formik.getFieldProps('email')}
 						/>
 						{formik.touched.email && formik.errors.email ? (
-							<div>{formik.errors.email}</div>
+							<p>{formik.errors.email}</p>
 						) : null}
 
 						<label htmlFor="password">Password</label>
@@ -96,7 +64,7 @@ export default function AuthForm(props) {
 							{...formik.getFieldProps('password')}
 						/>
 						{formik.touched.password && formik.errors.password ? (
-							<div>{formik.errors.password}</div>
+							<p>{formik.errors.password}</p>
 						) : null}
 
 						{logIn ? null : (
@@ -110,7 +78,7 @@ export default function AuthForm(props) {
 								/>
 								{formik.touched.confirmPassword &&
 								formik.errors.confirmPassword ? (
-									<div>{formik.errors.confirmPassword}</div>
+									<p>{formik.errors.confirmPassword}</p>
 								) : null}
 							</>
 						)}
@@ -124,4 +92,6 @@ export default function AuthForm(props) {
 			</Link>
 		</section>
 	);
-}
+};
+
+export default AuthForm;

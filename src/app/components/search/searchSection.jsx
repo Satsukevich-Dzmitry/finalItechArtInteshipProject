@@ -1,7 +1,7 @@
 import React from 'react';
 import { Switch, Route, Link } from 'react-router-dom';
-import CookboockSearch from './cookbookSearch';
-import RecepiesSearch from './recepiesSearch';
+import CookboockSearch from './cooksBookSearch/cookBookSearch';
+import RecepiesSearch from './recepiesSearch/recepiesSearch';
 
 export default function Search(props) {
 	return (

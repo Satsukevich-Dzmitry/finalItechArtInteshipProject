@@ -3,16 +3,21 @@
 @import 'vars/vars';
 @import 'vars/mixins';
 @import 'common/commonStyles';
-@import 'common/cookBook';
-@import 'headerAndFooter/header';
-@import 'headerAndFooter/footer';
-@import 'mainPage/mainSection';
-@import 'mainPage/banner';
-@import 'mainPage/popularCookbook';
-@import 'mainPage/pickedArticles';
-@import 'mainPage/trandingRecepies';
-@import 'search/searchSection';
-@import 'auth/authPage';
+@import '../app/components/mainPage/cookBook/cookBook';
+@import '../app/components/headerAndFooter/header/header';
+@import '../app/components/headerAndFooter/footer/footer';
+@import '../app/components/mainPage/mainSection/mainSection';
+@import '../app/components/mainPage/banner/banner';
+@import '../app/components/mainPage/popularCookBooks/popularCookbook';
+@import '../app/components/mainPage/pickedArticles/pickedArticles';
+@import '../app/components/mainPage/trendingRecepies/trandingRecepies';
+@import '../app/components/search/recepiesSearch/recepiesSearch';
+@import '../app/components/search/cooksBookSearch/cookBookSearch';
+@import '../app/components/search/searchSection';
+@import '../app/components/auth/loginSection/logIn.scss';
+@import '../app/components/auth/signUpSection/signUp.scss';
+@import '../app/components/auth/authForm/authForm';
+@import '../app/components/auth/authSectionMessage/authSectionMessage.scss';
 
 
 body {

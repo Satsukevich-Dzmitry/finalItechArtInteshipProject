@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
-export default function Header(props) {
+const Header = () => {
 	const user = useSelector((state) => state.user);
 	const { logged } = user;
 	return (
@@ -37,4 +37,5 @@ export default function Header(props) {
 			</div>
 		</header>
 	);
-}
+};
+export default Header;
