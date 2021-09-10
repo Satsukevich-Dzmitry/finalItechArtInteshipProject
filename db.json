@@ -92,15 +92,62 @@
   "users": [
     {
       "email": "test2@mail.com",
+<<<<<<< HEAD
       "password": "$2a$10$f/i9gp60f/zFlScbjfj.7Owk2pfyQHHGCJzUHdCjG9RW3YFlhyBo6",
       "confirmPassword": "12345678",
+=======
+      "password": "$2a$10$aMG0FQcwYuyZ4eQf4ulUi.L4NcXeLiBdfJBdEUozCwo86aQXazngu",
+      "confirmPassword": "1234567890",
+>>>>>>> 23e0d79a7e2d28534e79c314971cfb96a018be2a
       "id": 1
     },
     {
       "email": "hello@mail.com",
+<<<<<<< HEAD
       "password": "$2a$10$73TPWxB2xnxMBTi449Af7OuslQU.ved22mo14v.Jbms2Sndi4toGS",
       "confirmPassword": "12345678",
       "id": 2
+=======
+      "password": "$2a$10$18/mHGLG6D4Mr1F0l62In.32b1igd3raclA/dLmhY/ak5Xxv1HS0u",
+      "confirmPassword": "12345678",
+      "id": 2
+    },
+    {
+      "email": "top@mail.com",
+      "password": "$2a$10$gfA85si0bke2lDAfcTzRoe7Z3rOLwzfaKff6gjm/V/OVBirCzITNq",
+      "confirmPassword": "12345678",
+      "id": 3
+    },
+    {
+      "email": "wrt@mail.com",
+      "password": "$2a$10$0gOFoGDHUjnne3zmVABYcOb8.pvFlqjsb.066LAmTQxJ30Skp3Vji",
+      "id": 4
+    },
+    {
+      "email": "PostmanTest@mail.com",
+      "password": "$2a$10$zWikaKPYhn6rNhnR66KIbON.G33y9TvTCLyzFLNWRg8Uuu7R8Y80S",
+      "id": 5
+    },
+    {
+      "email": "inputTest@mail.com",
+      "password": "$2a$10$ZEbetLPbcchnckpxM/pvzeItFEc/4WFNnsLiW/Uv/ctcAFCc5kLK.",
+      "id": 6
+    },
+    {
+      "email": "fix@mail.com",
+      "password": "$2a$10$xiPNXXtMKNMTxymG2siUjOJ/rHNXfQK4litb1uxgwE5WQnU216ma.",
+      "id": 7
+    },
+    {
+      "email": "dsadaw@cacaca.com",
+      "password": "$2a$10$6dUMnyydRAZoj880UvvsPeuteGHK2ZtQyKhfzxqCaFTGSgZKiDyPi",
+      "id": 8
+    },
+    {
+      "email": "dimamoving@yandex.by",
+      "password": "$2a$10$dO5cvMAhyJRBP1jIaxKG8unxo4xV1sqpkUxEnkmry7E6j6qW6P7cC",
+      "id": 9
+>>>>>>> 23e0d79a7e2d28534e79c314971cfb96a018be2a
     }
   ]
 }

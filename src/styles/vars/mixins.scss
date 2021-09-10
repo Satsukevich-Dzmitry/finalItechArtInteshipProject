@@ -14,3 +14,21 @@
 	font-style: $fontStyle;
 	font-size: $fontSize;
 }
+
+@mixin authPage($bgImg:'../../images/logInImg.png', $bgColor: #fff, $bgPos:'right', $innerDivPos: flex-start){
+	background-image: url($bgImg);
+	min-height: 900px;
+	background-repeat: no-repeat;
+	background-position: $bgPos;
+	background-color: $bgColor;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	&>div{
+		width:1100px;
+		display:flex;
+		justify-content: $innerDivPos;
+		align-items: center;
+	}
+}

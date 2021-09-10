@@ -12,4 +12,32 @@ export default async function fetchUsers(url, payload) {
 	}
 	throw new Error('Error fetching users');
 
+<<<<<<< HEAD
+=======
+}
+
+
+export async function changePassword(id, newPassword) {
+	const credsResponse = await fetch(`http://localhost:3000/users/${id}`, {
+		method: 'PATCH',
+		headers: {
+			'content-type': 'application/json',
+		},
+		body: JSON.stringify({ password: newPassword }),
+	});
+	const credentials = await credsResponse.json();
+	const { email } = credentials;
+	const payload = { email, password: newPassword };
+	const response = await fetchUsers('login', payload);
+	return response;
+}
+
+export async function restorePassword(email, newPassword) {
+	const users = await fetch(`http://localhost:3000/users?email=${email}`);
+	const usersData = await users.json();
+	const user = usersData[0];
+	const { id } = user;
+	const data = await changePassword(id, newPassword);
+	return data;
+>>>>>>> 23e0d79a7e2d28534e79c314971cfb96a018be2a
 }
