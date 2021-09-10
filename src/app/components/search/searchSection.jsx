@@ -1,9 +1,7 @@
 import React from 'react';
-import { Switch, Route, Link } from 'react-router-dom';
-import CookboockSearch from './cooksBookSearch/cookBookSearch';
-import RecepiesSearch from './recepiesSearch/recepiesSearch';
+import { Link } from 'react-router-dom';
 
-export default function Search(props) {
+export default function Search({ children }) {
 	return (
 		<main className="main-section">
 			<section className="search-section">
@@ -13,12 +11,7 @@ export default function Search(props) {
 						<Link to="/search/cookBooks">Cookbooks</Link>
 						<Link to="/search/recepies">Recepies</Link>
 					</nav>
-					<section className="search-content">
-						<Switch>
-							<Route path="/search/cookBooks" component={CookboockSearch} />
-							<Route path="/search/recepies" component={RecepiesSearch} />
-						</Switch>
-					</section>
+					<section className="search-content">{children}</section>
 				</div>
 			</section>
 		</main>

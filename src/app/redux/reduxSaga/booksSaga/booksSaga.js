@@ -1,13 +1,13 @@
 import { takeEvery, put, call } from 'redux-saga/effects';
-import getData from '../../../services/getData';
-import { GET_REQUEST, GET_SUCCESS } from '../../booksSlice/booksSlice';
+import getCookbooksData from '../../../services/getBooksData';
+import { GET_BOOKS_REQUEST, GET_BOOKS_SUCCESS } from '../../booksSlice/booksSlice';
 
 
 function* fetchBooksSaga() {
-	const payload = yield call(getData);
-	yield put(GET_SUCCESS(payload));
+	const payload = yield call(getCookbooksData);
+	yield put(GET_BOOKS_SUCCESS(payload));
 }
 
 export default function* bookSagaWatcher() {
-	yield takeEvery(GET_REQUEST, fetchBooksSaga);
+	yield takeEvery(GET_BOOKS_REQUEST, fetchBooksSaga);
 };

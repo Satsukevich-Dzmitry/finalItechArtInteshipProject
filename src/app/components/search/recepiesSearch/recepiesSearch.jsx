@@ -1,17 +1,12 @@
 import React from 'react';
-import CookBook from '../../mainPage/cookBook/cookBook';
+import { useSelector } from 'react-redux';
+import RecepieShort from '../../recepies/recepieShort';
 
-export default function RecepiesSearch(props) {
-	return (
-		<div className="recipies-search-result">
-			<CookBook />
-			<CookBook />
-			<CookBook />
-			<CookBook />
-			<CookBook />
-			<CookBook />
-			<CookBook />
-			<CookBook />
-		</div>
-	);
+export default function RecepiesSearch() {
+	const allRecepies = useSelector(({ recepies }) => recepies.allRecepies);
+	const RecepesToShow = allRecepies.map((recipe) => {
+		const { id } = recipe;
+		return <RecepieShort key={id} recipe={recipe} />;
+	});
+	return <div className="recipies-search-result">{RecepesToShow}</div>;
 }

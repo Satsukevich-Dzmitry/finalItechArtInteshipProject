@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit'
 
 export const recepiesSlice = createSlice({
-	name: 'Recepies',
+	name: 'RECEPIES',
 	initialState: {
 		allRecepies: [
 			{
@@ -16,9 +16,15 @@ export const recepiesSlice = createSlice({
 		]
 	},
 	reducers: {
+		GET_RECEPIES_SUCCESS: (state, action) => {
+			state.allRecepies = action.payload;
+		},
+		GET_RECEPIES_REQUEST: (state) => {
+			state
+		}
 	}
 })
 
-export const { GET_SUCCESS, GET_REQUEST } = recepiesSlice.actions
+export const { GET_RECEPIES_SUCCESS, GET_RECEPIES_REQUEST } = recepiesSlice.actions
 
 export default recepiesSlice.reducer

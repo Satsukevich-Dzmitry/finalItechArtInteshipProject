@@ -1,0 +1,10 @@
+@import './profileInfo/profileInfo';
+@import './profileMenu/profilemenu';
+
+.profile-page{
+	min-height: 80vh;
+	width:1110px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}

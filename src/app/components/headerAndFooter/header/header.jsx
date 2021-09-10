@@ -21,7 +21,7 @@ const Header = () => {
 					<input type="text" className="navbar_seach-input" />
 				</nav>
 				{logged ? (
-					<Link to="/" className="navbar-link">
+					<Link to="/profilePage" className="navbar-link">
 						{user.user.email}
 					</Link>
 				) : (

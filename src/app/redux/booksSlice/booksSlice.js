@@ -16,15 +16,15 @@ export const booksSlice = createSlice({
 		]
 	},
 	reducers: {
-		GET_SUCCESS: (state, action) => {
+		GET_BOOKS_SUCCESS: (state, action) => {
 			state.allBooks = action.payload;
 		},
-		GET_REQUEST: (state) => {
+		GET_BOOKS_REQUEST: (state) => {
 			state
 		}
 	}
 })
 
-export const { GET_SUCCESS, GET_REQUEST } = booksSlice.actions
+export const { GET_BOOKS_SUCCESS, GET_BOOKS_REQUEST } = booksSlice.actions
 
 export default booksSlice.reducer

@@ -14,19 +14,16 @@
 @import '../app/components/search/recepiesSearch/recepiesSearch';
 @import '../app/components/search/cooksBookSearch/cookBookSearch';
 @import '../app/components/search/searchSection';
-@import '../app/components/auth/loginSection/logIn.scss';
-@import '../app/components/auth/signUpSection/signUp.scss';
+@import '../app/components/auth/loginSection/logIn';
+@import '../app/components/auth/signUpSection/signUp';
 @import '../app/components/auth/authForm/authForm';
-@import '../app/components/auth/authSectionMessage/authSectionMessage.scss';
+@import '../app/components/auth/authSectionMessage/authSectionMessage';
+@import '../app/components/profile/profilePage';
 
-
-body {
+#root {
+	width: 100%;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	background-color: $backgroundColor;
-}
-
-#root {
-	width: 100%;
 }
