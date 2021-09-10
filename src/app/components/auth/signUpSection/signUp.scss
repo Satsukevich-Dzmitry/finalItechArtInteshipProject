@@ -1,0 +1,3 @@
+.signup-section{
+	@include authPage($bgImg: '../../images/signUpImg.png', $bgColor: $signupBg, $bgPos:'right', $innerDivPos: flex-end);
+}

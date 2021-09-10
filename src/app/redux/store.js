@@ -1,12 +1,20 @@
-import { createStore, applyMiddleware } from "redux";
-import { composeWithDevTools } from 'redux-devtools-extension';
+import { configureStore } from "@reduxjs/toolkit";
 import createSagaMiddleware from 'redux-saga';
-import { booksReducer } from "./reducers/booksReducers";
-import sagaWatcher from "./reduxSaga/sagas";
+import booksReducer from './booksSlice/booksSlice';
+import userReducer from "./userSlice/userSlice";
+import rootSaga from "./reduxSaga/sagas";
 
 const saga = createSagaMiddleware();
-const store = createStore(booksReducer, composeWithDevTools(applyMiddleware(saga)));
 
-saga.run(sagaWatcher);
+const store = configureStore({
+	reducer: {
+		books: booksReducer,
+		user: userReducer
+	},
+	middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(saga)
+})
+
+
+saga.run(rootSaga);
 
 export default store;
