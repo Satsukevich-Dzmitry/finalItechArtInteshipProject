@@ -3,21 +3,6 @@
 @import 'vars/vars';
 @import 'vars/mixins';
 @import 'common/commonStyles';
-<<<<<<< HEAD
-<<<<<<< HEAD
-@import 'common/cookBook';
-@import 'headerAndFooter/header';
-@import 'headerAndFooter/footer';
-@import 'mainPage/mainSection';
-@import 'mainPage/banner';
-@import 'mainPage/popularCookbook';
-@import 'mainPage/pickedArticles';
-@import 'mainPage/trandingRecepies';
-@import 'search/searchSection';
-@import 'auth/authPage';
-=======
-=======
->>>>>>> 23e0d79a7e2d28534e79c314971cfb96a018be2a
 @import '../app/components/mainPage/cookBook/cookBook';
 @import '../app/components/headerAndFooter/header/header';
 @import '../app/components/headerAndFooter/footer/footer';
@@ -33,10 +18,6 @@
 @import '../app/components/auth/signUpSection/signUp.scss';
 @import '../app/components/auth/authForm/authForm';
 @import '../app/components/auth/authSectionMessage/authSectionMessage.scss';
-<<<<<<< HEAD
->>>>>>> 23e0d79a7e2d28534e79c314971cfb96a018be2a
-=======
->>>>>>> 23e0d79a7e2d28534e79c314971cfb96a018be2a
 
 
 body {
