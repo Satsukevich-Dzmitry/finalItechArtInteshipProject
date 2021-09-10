@@ -13,7 +13,10 @@ export default async function fetchUsers(url, payload) {
 	throw new Error('Error fetching users');
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 23e0d79a7e2d28534e79c314971cfb96a018be2a
 }
 
 
@@ -39,5 +42,8 @@ export async function restorePassword(email, newPassword) {
 	const { id } = user;
 	const data = await changePassword(id, newPassword);
 	return data;
+<<<<<<< HEAD
+>>>>>>> 23e0d79a7e2d28534e79c314971cfb96a018be2a
+=======
 >>>>>>> 23e0d79a7e2d28534e79c314971cfb96a018be2a
 }

@@ -93,8 +93,13 @@
     {
       "email": "test2@mail.com",
 <<<<<<< HEAD
+<<<<<<< HEAD
       "password": "$2a$10$f/i9gp60f/zFlScbjfj.7Owk2pfyQHHGCJzUHdCjG9RW3YFlhyBo6",
       "confirmPassword": "12345678",
+=======
+      "password": "$2a$10$aMG0FQcwYuyZ4eQf4ulUi.L4NcXeLiBdfJBdEUozCwo86aQXazngu",
+      "confirmPassword": "1234567890",
+>>>>>>> 23e0d79a7e2d28534e79c314971cfb96a018be2a
 =======
       "password": "$2a$10$aMG0FQcwYuyZ4eQf4ulUi.L4NcXeLiBdfJBdEUozCwo86aQXazngu",
       "confirmPassword": "1234567890",
@@ -104,10 +109,13 @@
     {
       "email": "hello@mail.com",
 <<<<<<< HEAD
+<<<<<<< HEAD
       "password": "$2a$10$73TPWxB2xnxMBTi449Af7OuslQU.ved22mo14v.Jbms2Sndi4toGS",
       "confirmPassword": "12345678",
       "id": 2
 =======
+=======
+>>>>>>> 23e0d79a7e2d28534e79c314971cfb96a018be2a
       "password": "$2a$10$18/mHGLG6D4Mr1F0l62In.32b1igd3raclA/dLmhY/ak5Xxv1HS0u",
       "confirmPassword": "12345678",
       "id": 2
@@ -147,6 +155,9 @@
       "email": "dimamoving@yandex.by",
       "password": "$2a$10$dO5cvMAhyJRBP1jIaxKG8unxo4xV1sqpkUxEnkmry7E6j6qW6P7cC",
       "id": 9
+<<<<<<< HEAD
+>>>>>>> 23e0d79a7e2d28534e79c314971cfb96a018be2a
+=======
 >>>>>>> 23e0d79a7e2d28534e79c314971cfb96a018be2a
     }
   ]

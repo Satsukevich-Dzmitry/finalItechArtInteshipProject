@@ -3,17 +3,23 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import MainPage from './components/mainPage/mainPage';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import LogIn from './components/auth/logIn';
 import SignUp from './components/auth/signUp';
 import Header from './components/headerAndFooter/header';
 import Footer from './components/headerAndFooter/footer';
 import Search from './components/search/search';
 =======
+=======
+>>>>>>> 23e0d79a7e2d28534e79c314971cfb96a018be2a
 import LogIn from './components/auth/logInSection/logIn';
 import SignUp from './components/auth/signUpSection/signUp';
 import Header from './components/headerAndFooter/header/header';
 import Footer from './components/headerAndFooter/footer/footer';
 import Search from './components/search/searchSection';
+<<<<<<< HEAD
+>>>>>>> 23e0d79a7e2d28534e79c314971cfb96a018be2a
+=======
 >>>>>>> 23e0d79a7e2d28534e79c314971cfb96a018be2a
 import { GET_REQUEST } from './redux/booksSlice/booksSlice';
 
