@@ -1,0 +1,13 @@
+.auth-section-message{
+	@include NunitoFont(32px, $black, 600);
+	&>span{
+		@include NunitoFont(16px, $lightGrey);
+		&>a{
+			color: $yellow;
+			&:hover{
+				text-decoration: underline;
+				text-decoration-color: $yellow;
+			}
+		}
+	}
+}

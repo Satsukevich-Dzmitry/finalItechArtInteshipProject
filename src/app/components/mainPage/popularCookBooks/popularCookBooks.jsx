@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import CookBook from './cookBook';
+import CookBook from '../cookBook/cookBook';
 
 export default function PopularCookBooks() {
 	const allBooks = useSelector(({ books }) => books.allBooks);

@@ -1,9 +1,9 @@
 import React from 'react';
-import CookBook from '../mainPage/cookBook';
+import CookBook from '../../mainPage/cookBook/cookBook';
 
-export default function RecepiesSearch(props) {
+export default function CookboockSearch(props) {
 	return (
-		<div className="recipies-search-result">
+		<div className="cookbook-search-result">
 			<CookBook />
 			<CookBook />
 			<CookBook />

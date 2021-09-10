@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function CookBook(props) {
+const CookBook = (props) => {
 	const { cookBook } = props;
 	const { title, author, views, likes, comments, img } = cookBook;
 	return (
@@ -15,4 +15,5 @@ export default function CookBook(props) {
 			</div>
 		</article>
 	);
-}
+};
+export default CookBook;
