@@ -2,13 +2,14 @@ import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Formik, Form, Field, FieldArray } from 'formik';
 import { nanoid } from 'nanoid';
+import { recipeCreationValidation } from '../../../validations/recipesValidation';
 import { POST_RECEPIE_REQUEST } from '../../../redux/recepiesSlice/recepiesSlice';
 
 const RecipeCreation = () => {
 	const userStatus = useSelector((state) => state.user);
 	const { logged, user } = userStatus;
 	const dispatch = useDispatch();
-	const onSubmit = (values) => {
+	const onSubmit = (values, { setSubmitting, resetForm }) => {
 		const { id, email, userName } = user;
 		const payload = {
 			...values,
@@ -16,8 +17,11 @@ const RecipeCreation = () => {
 			author: userName || email,
 			id: nanoid(),
 			likes: 0,
+			comments: 0,
 		};
 		dispatch(POST_RECEPIE_REQUEST(payload));
+		setSubmitting(false);
+		resetForm();
 	};
 	// if(!logged){
 	// 	return <div>You are not logged in</div>
@@ -33,7 +37,8 @@ const RecipeCreation = () => {
 					directions: '',
 				}}
 				onSubmit={onSubmit}
-				render={({ values, resetForm }) => (
+				validationSchema={recipeCreationValidation}
+				render={({ values, resetForm, errors, touched }) => (
 					<Form className="recipe-creation-form">
 						<div className="recipe-creation-form_element">
 							<label htmlFor="recipe-creation_title">Recepie title</label>
@@ -43,6 +48,9 @@ const RecipeCreation = () => {
 								type="text"
 								placeholder="Title"
 							/>
+							{errors.title && touched.title ? (
+								<div className="recipe-creation-form_error">{errors.title}</div>
+							) : null}
 						</div>
 						<div className="recipe-creation-form_img-element">
 							<label htmlFor="recipe-creation-form_img">Recepie picture</label>
@@ -75,7 +83,18 @@ const RecipeCreation = () => {
 												<Field
 													name={`ingredients.${index}`}
 													placeholder={`Ingredient #${index + 1}`}
-												/>
+												>
+													{({ field, meta }) => (
+														<>
+															<input type="text" {...field} />
+															{meta.touched && meta.error && (
+																<div className="recipe-creation-form_error">
+																	{meta.error}
+																</div>
+															)}
+														</>
+													)}
+												</Field>
 											);
 										}
 									})}
@@ -97,7 +116,14 @@ const RecipeCreation = () => {
 												);
 											}
 										})}
-										<button type="button" onClick={() => arrayHelpers.push('')}>
+										<button
+											type="button"
+											onClick={() =>
+												!values.ingredients?.includes('')
+													? arrayHelpers.push('')
+													: console.log('error')
+											}
+										>
 											Add another Ingredient
 										</button>
 									</div>

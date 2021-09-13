@@ -9,6 +9,6 @@ const RecepiesList = ({ id }) => {
 	const recipesToShow = userRecepies?.map((recipe) => (
 		<RecipeShort key={recipe.id} recipe={recipe} />
 	));
-	return <h1>{recipesToShow}</h1>;
+	return <section>{recipesToShow}</section>;
 };
 export default RecepiesList;

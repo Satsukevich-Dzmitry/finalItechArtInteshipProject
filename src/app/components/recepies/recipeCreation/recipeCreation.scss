@@ -127,5 +127,8 @@
 				border-radius: 8px;
 			}
 		}
+		&_error{
+			@include NunitoFont(24px, $errorColor);
+		}
 	}
 }
