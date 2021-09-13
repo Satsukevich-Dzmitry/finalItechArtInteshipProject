@@ -13,6 +13,7 @@ import ProfilePage from './components/profile/profilePage';
 import CookboockSearch from './components/search/cooksBookSearch/cookBookSearch';
 import RecepiesSearch from './components/search/recepiesSearch/recepiesSearch';
 import RecepieFull from './components/recepies/recepieFull';
+import RecipeCreation from './components/recepies/recipeCreation/recipeCreation';
 
 const App = () => {
 	const dispatch = useDispatch();
@@ -51,6 +52,7 @@ const App = () => {
 				/>
 				<Route path="/search/recepies/:recepieId" component={RecepieFull} />
 			</Switch>
+			<Route path="/recipeCreating" component={RecipeCreation} />
 			<Footer />
 		</Router>
 	);

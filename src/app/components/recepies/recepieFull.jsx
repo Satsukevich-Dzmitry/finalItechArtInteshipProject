@@ -6,13 +6,24 @@ const RecepieFull = ({ match }) => {
 	const { recepieId } = match.params;
 	const recepie = useSelector(({ recepies }) => {
 		console.log(recepies.allRecepies);
-		return recepies.allRecepies.find((recipe) => +recipe.id === +recepieId);
+		return recepies.allRecepies.find((recipe) => recipe.id === recepieId);
 	});
 	if (!recepie) {
 		return <div>Not found...</div>;
 	}
 	return (
-		<div>{JSON.stringify(recepie)}</div>
+		<section>
+			<div>{JSON.stringify(recepie)}</div>
+			<img src="/" alt="Food" />
+			<div>
+				<h1>{recepie.title}</h1>
+				<p>{recepie.author}</p>
+				<div>
+					<h2>Desctiption</h2>
+					<p>{recepie.description}</p>
+				</div>
+			</div>
+		</section>
 		// <article className="cook-book">
 		// 	<span className="cook-book_metrics">👁{views} views</span>
 		// 	<img className="cook-book_img" src={img} alt="CookBook" />

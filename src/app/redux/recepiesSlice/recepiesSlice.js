@@ -20,11 +20,11 @@ export const recepiesSlice = createSlice({
 			state.allRecepies = action.payload;
 		},
 		GET_RECEPIES_REQUEST: (state) => {
-			state
-		}
+		},
+		POST_RECEPIE_REQUEST: (state) => { }
 	}
 })
 
-export const { GET_RECEPIES_SUCCESS, GET_RECEPIES_REQUEST } = recepiesSlice.actions
+export const { GET_RECEPIES_SUCCESS, GET_RECEPIES_REQUEST, POST_RECEPIE_REQUEST } = recepiesSlice.actions
 
 export default recepiesSlice.reducer

@@ -24,7 +24,11 @@ const ProfileActions = () => {
 				}`}
 			>
 				<li className="profile-actions-list_item">Create new Cookbook</li>
-				<li className="profile-actions-list_item">Create new Recepie</li>
+				<li className="profile-actions-list_item">
+					<Link style={{ color: 'inherited' }} to="recipeCreating">
+						Create new Recepie
+					</Link>
+				</li>
 			</ul>
 		</div>
 	);

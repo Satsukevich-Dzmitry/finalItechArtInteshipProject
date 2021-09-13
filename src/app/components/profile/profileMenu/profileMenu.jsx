@@ -1,14 +1,15 @@
 import React, { useState } from 'react';
+import { useSelector } from 'react-redux';
 import RecepiesList from '../../lists/recepiesList';
 import ChangePasswordForm from '../../auth/changepasswordForm/changePassword';
 
 const ProfileMenu = () => {
 	const [activeTab, setActiveTab] = useState(0);
-
+	const { id } = useSelector((state) => state.user?.user);
 	const tabs = [
-		<RecepiesList id={1} />,
-		<RecepiesList id={2} />,
-		<RecepiesList id={3} />,
+		<RecepiesList id={id} />,
+		<RecepiesList id={id} />,
+		<RecepiesList id={id} />,
 	];
 
 	return (

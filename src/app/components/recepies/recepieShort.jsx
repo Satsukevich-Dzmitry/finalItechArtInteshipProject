@@ -13,7 +13,7 @@ const RecepieShort = ({ recipe }) => {
 			<p className="cook-book_author">{author}</p>
 			<div className="cook-book_likes">
 				<span className="cook-book_metrics"> &#9825; {likes} likes</span>
-				<span className="cook-book_metrics">💬 {comments} comments</span>
+				<span className="cook-book_metrics">💬 {comments || 0} comments</span>
 			</div>
 		</article>
 	);

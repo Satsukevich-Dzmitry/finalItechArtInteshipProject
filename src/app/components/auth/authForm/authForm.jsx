@@ -39,7 +39,11 @@ const AuthForm = (props) => {
 			</h2>
 			<AuthSectionMessage logIn />
 			<Formik
-				initialValues={{ email: '', password: '', confirmPassword: '' }}
+				initialValues={{
+					email: '',
+					password: '',
+					confirmPassword: '',
+				}}
 				validationSchema={validationSchemaFormik}
 				onSubmit={onFormSubmit}
 			>
