@@ -34,15 +34,6 @@
 		display: block;
 		@include RobotoFont(12px, $darkText);
 		padding: 10px 0;
-		&__button{
-			@include RobotoFont(15px, $darkText);
-			border: none;
-			background-color: transparent;
-			&:hover{
-				cursor: pointer;
-				color: $errorColor;
-			}
-		}
 	}
 	&_likes{
 		width: 100%;

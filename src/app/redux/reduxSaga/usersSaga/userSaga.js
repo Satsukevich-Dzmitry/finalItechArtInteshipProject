@@ -1,6 +1,19 @@
 import { takeEvery, put, call } from 'redux-saga/effects';
-import { USER_LOGGED, USER_LOGGING, USER_PASSWORD_CHANGING, USER_PASSWORD_RESTORING } from '../../userSlice/userSlice';
-import fetchUsers, { restorePassword, changePassword } from '../../../services/usersFetch';
+import { USER_LOGGED, USER_LOGGING, USER_PASSWORD_CHANGING, USER_PASSWORD_RESTORING, USER_LIKED_RECIPE, USER_UNLIKED_RECIPE } from '../../userSlice/userSlice';
+import { RECEPIE_LIKED, RECEPIE_UNLIKED } from '../../recepiesSlice/recepiesSlice';
+import fetchUsers, { restorePassword, changePassword } from '../../../services/users/usersFetch';
+import addLikedRecepie from '../../../services/users/addLikedRecipe';
+import removeLikedRecepie from '../../../services/users/removeLikedRecipe';
+
+function* userRecipeunLiked({ payload }) {
+	const likedRecepies = yield call(removeLikedRecepie, payload.userId, payload.postId);
+	yield put(USER_UNLIKED_RECIPE(likedRecepies));
+}
+
+function* userRecipeLiked({ payload }) {
+	const likedRecepies = yield call(addLikedRecepie, payload.userId, payload.postId);
+	yield put(USER_LIKED_RECIPE(likedRecepies));
+}
 
 function* userLogInSaga({ payload }) {
 	const { email, password, url } = payload;
@@ -25,4 +38,6 @@ export default function* userLogInSagaWatcher() {
 	yield takeEvery(USER_LOGGING, userLogInSaga);
 	yield takeEvery(USER_PASSWORD_CHANGING, userPasswordChanging);
 	yield takeEvery(USER_PASSWORD_RESTORING, userPasswordRestoring);
+	yield takeEvery(RECEPIE_LIKED, userRecipeLiked);
+	yield takeEvery(RECEPIE_UNLIKED, userRecipeunLiked);
 };

@@ -2,8 +2,7 @@ import React from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import { Formik } from 'formik';
 import { useDispatch } from 'react-redux';
-import { USER_LOGGED, USER_LOGGING } from '../../../redux/userSlice/userSlice';
-import fetchUsers from '../../../services/usersFetch';
+import { USER_LOGGING } from '../../../redux/userSlice/userSlice';
 import AuthSectionMessage from '../authSectionMessage/authSectionMessage';
 import {
 	userLoginValidation,

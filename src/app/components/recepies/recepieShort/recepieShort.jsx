@@ -1,17 +1,14 @@
 import React from 'react';
-import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { POST_LIKED } from '../../../redux/recepiesSlice/recepiesSlice';
+import { useSelector } from 'react-redux';
+import RecipeLikeBtn from '../recipeLikeBtn/recipeLikeBtn';
+import RecipeLikeBtnForUnlogged from '../recipeLikeBtn/recipeLikeBtnForUnlogged';
 
 const RecepieShort = ({ recipe }) => {
-	const dispatch = useDispatch();
 	const { author, comments, title, views, likes, img, id, description } =
 		recipe;
-
-	const onLikeClick = () => {
-		dispatch(POST_LIKED(id));
-	};
-
+	const userStatus = useSelector((state) => state.user);
+	const { logged } = userStatus;
 	return (
 		<article className="recepie-short">
 			<img className="recepie-short_img" src={img} alt="CookBook" />
@@ -26,14 +23,12 @@ const RecepieShort = ({ recipe }) => {
 					{description || 'No description added'}
 				</p>
 				<div className="recepie-short_likes">
-					<span type="button" className="recepie-short_metrics">
-						<button
-							type="button"
-							className="recepie-short_metrics__button"
-							onClick={onLikeClick}
-						>
-							&#9825;
-						</button>{' '}
+					<span className="recepie-short_metrics">
+						{logged ? (
+							<RecipeLikeBtn postId={id} />
+						) : (
+							<RecipeLikeBtnForUnlogged />
+						)}{' '}
 						{likes} likes
 					</span>
 					<span className="recepie-short_metrics">💬 {comments} comments</span>

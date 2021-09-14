@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { POST_VIEWED } from '../../redux/recepiesSlice/recepiesSlice';
+import { RECEPIE_VIEWED } from '../../redux/recepiesSlice/recepiesSlice';
 
 const RecepieFull = ({ match }) => {
 	const { recepieId } = match.params;
@@ -10,7 +10,7 @@ const RecepieFull = ({ match }) => {
 	);
 	const dispatch = useDispatch();
 	useEffect(() => {
-		dispatch(POST_VIEWED(recepieId));
+		dispatch(RECEPIE_VIEWED({ recepieId }));
 	}, []);
 
 	if (!recepie) {

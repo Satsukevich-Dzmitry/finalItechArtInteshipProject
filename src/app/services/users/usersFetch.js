@@ -1,4 +1,18 @@
 export default async function fetchUsers(url, payload) {
+	if (url === 'register') {
+		const fullPayload = { ...payload, "likedRecipes": [] }
+		const response = await fetch(`http://localhost:3000/${url}`, {
+			method: 'POST',
+			headers: {
+				'content-type': 'application/json',
+			},
+			body: JSON.stringify(fullPayload),
+		});
+		if (response.ok) {
+			const data = await response.json();
+			return data;
+		}
+	}
 	const response = await fetch(`http://localhost:3000/${url}`, {
 		method: 'POST',
 		headers: {

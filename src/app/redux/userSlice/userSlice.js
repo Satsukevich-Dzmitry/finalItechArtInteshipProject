@@ -13,12 +13,18 @@ export const userSlice = createSlice({
 			state.user = action.payload.user;
 			state.authToken = action.payload.accessToken;
 		},
-		USER_LOGGING: (state) => { state },
-		USER_PASSWORD_CHANGING: (state) => { state },
-		USER_PASSWORD_RESTORING: (state) => { state },
+		USER_LOGGING: () => { },
+		USER_PASSWORD_CHANGING: () => { },
+		USER_PASSWORD_RESTORING: () => { },
+		USER_LIKED_RECIPE: (state, action) => {
+			state.user.likedRecipes = action.payload;
+		},
+		USER_UNLIKED_RECIPE: (state, action) => {
+			state.user.likedRecipes = action.payload;
+		}
 	}
 })
 
-export const { USER_LOGGED, USER_LOGGING, USER_PASSWORD_CHANGING, USER_PASSWORD_RESTORING } = userSlice.actions
+export const { USER_LOGGED, USER_LOGGING, USER_PASSWORD_CHANGING, USER_PASSWORD_RESTORING, USER_LIKED_RECIPE, USER_UNLIKED_RECIPE } = userSlice.actions
 
 export default userSlice.reducer

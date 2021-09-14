@@ -1,7 +1,7 @@
-export default async function addLikeToRecepie(id) {
+export default async function removeLikeFromRecepie(id) {
 	const currentRecipe = await fetch(`http://localhost:3000/recepies/${id}`).then(response => response.json());
 	const currentLikes = currentRecipe.likes;
-	const newLikes = currentLikes + 1;
+	const newLikes = currentLikes - 1;
 	await fetch(`http://localhost:3000/recepies/${id}`, {
 		method: 'PATCH',
 		headers: {

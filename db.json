@@ -42,8 +42,8 @@
       "id": "1",
       "title": "Fresh meat recepie",
       "author": "John Doe",
-      "views": 12000,
-      "likes": 512,
+      "views": 12001,
+      "likes": 503,
       "comments": 12,
       "img": "mostPopularCookbook.png",
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam dolorum deleniti fuga assumenda sequi sint."
@@ -52,8 +52,8 @@
       "id": "2",
       "title": "Fresh meat recepie",
       "author": "John Doe",
-      "views": 12001,
-      "likes": 499,
+      "views": 12002,
+      "likes": 500,
       "comments": 12,
       "img": "./images/mostPopularCookbook.png",
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam dolorum deleniti fuga assumenda sequi sint."
@@ -63,7 +63,7 @@
       "title": "Fresh meat recepie",
       "author": "John Doe",
       "views": 12002,
-      "likes": 499,
+      "likes": 503,
       "comments": 12,
       "img": "./images/mostPopularCookbook.png",
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam dolorum deleniti fuga assumenda sequi sint."
@@ -73,7 +73,7 @@
       "title": "Fresh meat recepie",
       "author": "John Doe",
       "views": 12003,
-      "likes": 499,
+      "likes": 500,
       "comments": 12,
       "img": "./images/mostPopularCookbook.png",
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam dolorum deleniti fuga assumenda sequi sint."
@@ -88,8 +88,8 @@
       "authorId": 14,
       "author": "Dzmitry",
       "id": "0_x9fi-fi6H9rgtkwATZi",
-      "likes": 0,
-      "views": 0
+      "likes": 1,
+      "views": 1
     },
     {
       "title": "Second Recipe",
@@ -104,7 +104,36 @@
       "authorId": 14,
       "author": "Dzmitry",
       "id": "0j2T_gV-xAgIngd-8uOgQ",
+      "likes": 3,
+      "comments": 0,
+      "views": 4
+    },
+    {
+      "title": "Recepie from another account",
+      "description": "Testing",
+      "ingredients": [
+        "some stuff",
+        "some more stuff"
+      ],
+      "directions": "...+...=done",
+      "authorId": 15,
+      "author": "Dzmitry2@mail.com",
+      "id": "xwzq6_LUpG0yqWULQo45r",
       "likes": 0,
+      "comments": 0,
+      "views": 0
+    },
+    {
+      "title": "Recipe from new user",
+      "description": "wow",
+      "ingredients": [
+        "first"
+      ],
+      "directions": "try smth",
+      "authorId": 17,
+      "author": "dzmitry4@mail.com",
+      "id": "nfDL01yQvEu33t8-xPxUm",
+      "likes": 1,
       "comments": 0,
       "views": 0
     }
@@ -196,7 +225,29 @@
       "email": "dima@mail.com",
       "password": "$2a$10$ztqh837KVL.iGOhA3UczhOvAYaW8HofFyzrLh2ELvydEiuK2t7fj6",
       "id": 14,
-      "userName": "Dzmitry"
+      "userName": "Dzmitry",
+      "likedRecipes": []
+    },
+    {
+      "email": "Dzmitry2@mail.com",
+      "password": "$2a$10$BP.TJwFwJ6TcbTGtlVRsqu/FJrKhNWTRok79NKEmGc0UDneqg1dhS",
+      "id": 15,
+      "likedRecipes": []
+    },
+    {
+      "email": "dzmitry3@mail.com",
+      "password": "$2a$10$DPxA0pBcKtaszspE9Gz1je3oqDjT7019/pZiBCZqaGgNTT3X9iLAm",
+      "likedRecipes": [],
+      "id": 16
+    },
+    {
+      "email": "dzmitry4@mail.com",
+      "password": "$2a$10$SkAPGCH09yCw4CG6/2XFEujf9EGMMNtY4kDfz.j5rANQnWxw20XX6",
+      "likedRecipes": [
+        "nfDL01yQvEu33t8-xPxUm",
+        "2"
+      ],
+      "id": 17
     }
   ]
 }
