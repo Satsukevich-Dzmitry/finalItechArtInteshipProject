@@ -73,16 +73,16 @@
 				@include NunitoFont(16px, $black);
 			}
 		}
-		&_element{
+		&-element{
 			display: flex;
 			flex-direction: column;
 			align-items: flex-start;
 			width:100%;
 			gap:5px;
-			&>label{
+			&_label{
 				@include NunitoFont(24px, $black);
 			}
-			&>input{
+			&_input{
 				@include NunitoFont(24px, $black);
 				background-color: $white;
 				box-sizing: border-box;
@@ -91,11 +91,11 @@
 				width: 100%;
 				height: 45px;
 				padding: 12px;
+				&:focus{
+					border-color: darken(#E1E1E1, 15%);
+				}
 			}
-			&>input:focus{
-				border-color: darken(#E1E1E1, 15%);
-			}
-			&>textarea{
+			&_textarea{
 				@include NunitoFont(24px, $black);
 				background-color: $white;
 				border: 1px solid #E1E1E1;

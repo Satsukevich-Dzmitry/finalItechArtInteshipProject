@@ -40,13 +40,19 @@ const RecipeCreation = () => {
 				validationSchema={recipeCreationValidation}
 				render={({ values, resetForm, errors, touched }) => (
 					<Form className="recipe-creation-form">
-						<div className="recipe-creation-form_element">
-							<label htmlFor="recipe-creation_title">Recepie title</label>
+						<div className="recipe-creation-form-element">
+							<label
+								className="recipe-creation-form-element_label"
+								htmlFor="recipe-creation_title"
+							>
+								Recepie title
+							</label>
 							<Field
 								id="recipe-creation_title"
 								name="title"
 								type="text"
 								placeholder="Title"
+								className="recipe-creation-form-element_input"
 							/>
 							{errors.title && touched.title ? (
 								<div className="recipe-creation-form_error">{errors.title}</div>
@@ -61,8 +67,11 @@ const RecipeCreation = () => {
 								placeholder="Image"
 							/>
 						</div>
-						<div className="recipe-creation-form_element">
-							<label htmlFor="recipe-creation-form_description">
+						<div className="recipe-creation-form-element">
+							<label
+								className="recipe-creation-form-element_label"
+								htmlFor="recipe-creation-form_description"
+							>
 								Description
 							</label>
 							<Field
@@ -71,12 +80,13 @@ const RecipeCreation = () => {
 								name="description"
 								type="text"
 								placeholder="Description"
+								className="recipe-creation-form-element_textarea"
 							/>
 						</div>
 						<FieldArray
 							name="ingredients"
 							render={(arrayHelpers) => (
-								<div className="recipe-creation-form_element">
+								<div className="recipe-creation-form-element">
 									{values.ingredients?.map((ingredient, index) => {
 										if (index === values.ingredients.length - 1) {
 											return (
@@ -86,7 +96,11 @@ const RecipeCreation = () => {
 												>
 													{({ field, meta }) => (
 														<>
-															<input type="text" {...field} />
+															<input
+																className="recipe-creation-form-element_input"
+																type="text"
+																{...field}
+															/>
 															{meta.touched && meta.error && (
 																<div className="recipe-creation-form_error">
 																	{meta.error}
@@ -130,8 +144,11 @@ const RecipeCreation = () => {
 								</div>
 							)}
 						/>
-						<div className="recipe-creation-form_element">
-							<label htmlFor="recipe-creation-form_directions">
+						<div className="recipe-creation-form-element">
+							<label
+								className="recipe-creation-form-element_label"
+								htmlFor="recipe-creation-form_directions"
+							>
 								Directions
 							</label>
 							<Field
@@ -140,6 +157,7 @@ const RecipeCreation = () => {
 								name="directions"
 								type="text"
 								placeholder="Directions"
+								className="recipe-creation-form-element_textarea"
 							/>
 						</div>
 						<div className="recipe-creation-form_btns">
