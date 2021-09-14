@@ -21,10 +21,23 @@ export const recepiesSlice = createSlice({
 		},
 		GET_RECEPIES_REQUEST: (state) => {
 		},
-		POST_RECEPIE_REQUEST: (state) => { }
+		POST_RECEPIE_REQUEST: (state) => { },
+		// UPDATE_RECEPIES(state, action) {
+		// 	console.log(action);
+		// 	console.log(state.allRecepies.find(recepie => recepie.id === action.payload.id));
+		// },
+		POST_LIKED: (state) => {
+		},
+		POST_LIKED_SUCCESS: (state, action) => { state.allRecepies.find(recepie => recepie.id === action.payload).likes += 1; },
+
+		POST_VIEWED: (state, action) => {
+		},
+		POST_VIEWED_SUCCESS: (state, action) => {
+			state.allRecepies.find(recepie => recepie.id === action.payload).views += 1;
+		}
 	}
 })
 
-export const { GET_RECEPIES_SUCCESS, GET_RECEPIES_REQUEST, POST_RECEPIE_REQUEST } = recepiesSlice.actions
+export const { GET_RECEPIES_SUCCESS, GET_RECEPIES_REQUEST, POST_RECEPIE_REQUEST, POST_LIKED, POST_VIEWED, POST_LIKED_SUCCESS } = recepiesSlice.actions
 
 export default recepiesSlice.reducer

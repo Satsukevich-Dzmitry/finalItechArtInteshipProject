@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import RecepieShort from '../../recepies/recepieShort';
+import RecepieShort from '../../recepies/recepieShort/recepieShort';
 
 export default function RecepiesSearch() {
 	const allRecepies = useSelector(({ recepies }) => recepies.allRecepies);

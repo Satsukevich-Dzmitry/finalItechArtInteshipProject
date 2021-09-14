@@ -18,6 +18,7 @@ const RecipeCreation = () => {
 			id: nanoid(),
 			likes: 0,
 			comments: 0,
+			views: 0,
 		};
 		dispatch(POST_RECEPIE_REQUEST(payload));
 		setSubmitting(false);

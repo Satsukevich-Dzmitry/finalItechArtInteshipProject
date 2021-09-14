@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import RecipeShort from '../recepies/recepieShort';
+import RecipeShort from '../recepies/recepieShort/recepieShort';
 
 const RecepiesList = ({ id }) => {
 	const userRecepies = useSelector(({ recepies }) =>

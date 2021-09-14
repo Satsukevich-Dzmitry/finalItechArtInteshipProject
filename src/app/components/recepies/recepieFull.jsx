@@ -1,13 +1,18 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { POST_VIEWED } from '../../redux/recepiesSlice/recepiesSlice';
 
 const RecepieFull = ({ match }) => {
 	const { recepieId } = match.params;
-	const recepie = useSelector(({ recepies }) => {
-		console.log(recepies.allRecepies);
-		return recepies.allRecepies.find((recipe) => recipe.id === recepieId);
-	});
+	const recepie = useSelector(({ recepies }) =>
+		recepies.allRecepies.find((recipe) => recipe.id === recepieId)
+	);
+	const dispatch = useDispatch();
+	useEffect(() => {
+		dispatch(POST_VIEWED(recepieId));
+	}, []);
+
 	if (!recepie) {
 		return <div>Not found...</div>;
 	}
