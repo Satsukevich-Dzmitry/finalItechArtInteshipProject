@@ -42,9 +42,9 @@
       "id": "1",
       "title": "Fresh meat recepie",
       "author": "John Doe",
-      "views": 12001,
+      "views": 12035,
       "likes": 503,
-      "comments": 12,
+      "commentsCount": 12,
       "img": "mostPopularCookbook.png",
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam dolorum deleniti fuga assumenda sequi sint."
     },
@@ -52,9 +52,9 @@
       "id": "2",
       "title": "Fresh meat recepie",
       "author": "John Doe",
-      "views": 12002,
+      "views": 12007,
       "likes": 500,
-      "comments": 12,
+      "commentsCount": 12,
       "img": "./images/mostPopularCookbook.png",
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam dolorum deleniti fuga assumenda sequi sint."
     },
@@ -64,7 +64,7 @@
       "author": "John Doe",
       "views": 12002,
       "likes": 503,
-      "comments": 12,
+      "commentsCount": 12,
       "img": "./images/mostPopularCookbook.png",
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam dolorum deleniti fuga assumenda sequi sint."
     },
@@ -74,7 +74,7 @@
       "author": "John Doe",
       "views": 12003,
       "likes": 500,
-      "comments": 12,
+      "commentsCount": 12,
       "img": "./images/mostPopularCookbook.png",
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam dolorum deleniti fuga assumenda sequi sint."
     },
@@ -89,7 +89,8 @@
       "author": "Dzmitry",
       "id": "0_x9fi-fi6H9rgtkwATZi",
       "likes": 1,
-      "views": 1
+      "views": 84,
+      "commentsCount": 0
     },
     {
       "title": "Second Recipe",
@@ -105,8 +106,8 @@
       "author": "Dzmitry",
       "id": "0j2T_gV-xAgIngd-8uOgQ",
       "likes": 3,
-      "comments": 0,
-      "views": 4
+      "commentsCount": 0,
+      "views": 5
     },
     {
       "title": "Recepie from another account",
@@ -120,7 +121,7 @@
       "author": "Dzmitry2@mail.com",
       "id": "xwzq6_LUpG0yqWULQo45r",
       "likes": 0,
-      "comments": 0,
+      "commentsCount": 0,
       "views": 0
     },
     {
@@ -133,9 +134,42 @@
       "authorId": 17,
       "author": "dzmitry4@mail.com",
       "id": "nfDL01yQvEu33t8-xPxUm",
+      "likes": 2,
+      "commentsCount": 0,
+      "views": 6
+    },
+    {
+      "title": "Test for files",
+      "description": "what will happend",
+      "ingredients": [
+        "1"
+      ],
+      "directions": "dafafasfas",
+      "img": "C:\\fakepath\\До.jpg",
+      "authorId": 14,
+      "author": "Dzmitry",
+      "id": "-XKvwH4UXvWFd8UR5Ww8e",
       "likes": 1,
-      "comments": 0,
-      "views": 0
+      "commentsCount": 0,
+      "views": 21
+    },
+    {
+      "title": "Almost real lorem recipe",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga ipsam sit, deleniti itaque ducimus doloribus neque? Omnis quisquam iste ipsa impedit! Iusto eveniet veniam fugiat totam nobis recusandae vel iste, veritatis corrupti inventore illo, eaque beatae. Sit reiciendis fugiat amet reprehenderit error eveniet consequatur possimus! Corrupti accusamus nam suscipit accusantium!",
+      "ingredients": [
+        "lorem",
+        "ipsum",
+        "dolor",
+        "something else",
+        "and another"
+      ],
+      "directions": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga ipsam sit, deleniti itaque ducimus doloribus neque? Omnis quisquam iste ipsa impedit! Iusto eveniet veniam fugiat totam nobis recusandae vel iste, veritatis corrupti inventore illo, eaque beatae. Sit reiciendis fugiat amet reprehenderit error eveniet consequatur possimus! Corrupti accusamus nam suscipit accusantium!",
+      "authorId": 14,
+      "author": "Dzmitry",
+      "id": "qyh1GDVLc4O29d5oRD7IQ",
+      "likes": 0,
+      "commentsCount": 0,
+      "views": 38
     }
   ],
   "cookBookComments": [
@@ -145,11 +179,30 @@
       "postId": "1"
     }
   ],
-  "recepieComments": [
+  "recepiesComments": [
     {
       "id": "1",
       "body": "some comment",
-      "postId": "1"
+      "postId": "1",
+      "authorId": "14"
+    },
+    {
+      "id": "2",
+      "body": "some comment other comment",
+      "postId": "1",
+      "authorId": "14"
+    },
+    {
+      "id": "3",
+      "body": "and another",
+      "postId": "1",
+      "authorId": "14"
+    },
+    {
+      "id": "4",
+      "body": "nope",
+      "postId": "3",
+      "authorId": "14"
     }
   ],
   "users": [
@@ -226,7 +279,10 @@
       "password": "$2a$10$ztqh837KVL.iGOhA3UczhOvAYaW8HofFyzrLh2ELvydEiuK2t7fj6",
       "id": 14,
       "userName": "Dzmitry",
-      "likedRecipes": []
+      "likedRecipes": [
+        "-XKvwH4UXvWFd8UR5Ww8e",
+        "nfDL01yQvEu33t8-xPxUm"
+      ]
     },
     {
       "email": "Dzmitry2@mail.com",

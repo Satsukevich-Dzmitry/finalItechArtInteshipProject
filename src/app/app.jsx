@@ -12,7 +12,7 @@ import Search from './components/search/searchSection';
 import ProfilePage from './components/profile/profilePage';
 import CookboockSearch from './components/search/cooksBookSearch/cookBookSearch';
 import RecepiesSearch from './components/search/recepiesSearch/recepiesSearch';
-import RecepieFull from './components/recepies/recepieFull';
+import RecepieFull from './components/recepies/recepieFull/recepieFull';
 import RecipeCreation from './components/recepies/recipeCreation/recipeCreation';
 
 const App = () => {

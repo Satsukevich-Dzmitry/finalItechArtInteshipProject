@@ -1,11 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-import RecipeLikeBtn from '../recipeLikeBtn/recipeLikeBtn';
-import RecipeLikeBtnForUnlogged from '../recipeLikeBtn/recipeLikeBtnForUnlogged';
+import RecepieControls from '../recepieControls/recepieControls';
 
 const RecepieShort = ({ recipe }) => {
-	const { author, comments, title, views, likes, img, id, description } =
+	const { author, commentsCount, title, views, likes, img, id, description } =
 		recipe;
 	const userStatus = useSelector((state) => state.user);
 	const { logged } = userStatus;
@@ -22,18 +21,13 @@ const RecepieShort = ({ recipe }) => {
 				<p className="recepie-short_description">
 					{description || 'No description added'}
 				</p>
-				<div className="recepie-short_likes">
-					<span className="recepie-short_metrics">
-						{logged ? (
-							<RecipeLikeBtn postId={id} />
-						) : (
-							<RecipeLikeBtnForUnlogged />
-						)}{' '}
-						{likes} likes
-					</span>
-					<span className="recepie-short_metrics">💬 {comments} comments</span>
-					<span className="recepie-short_metrics">👁{views} views</span>
-				</div>
+				<RecepieControls
+					logged={logged}
+					postId={id}
+					commentsCount={commentsCount}
+					views={views}
+					likes={likes}
+				/>
 			</div>
 		</article>
 	);

@@ -1,0 +1,15 @@
+@import './addCommentForm/addCommentForm';
+@import './singleComment/singleComment';
+
+.comments-section{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap:20px;
+	padding: 0 95px 95px;
+	box-sizing: border-box;
+	&_title{
+		@include NunitoFont(36px, $black, 600);
+	}
+}

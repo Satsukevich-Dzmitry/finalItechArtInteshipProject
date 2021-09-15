@@ -14,6 +14,13 @@
 	font-style: $fontStyle;
 	font-size: $fontSize;
 }
+@mixin MontserratFont($fontSize: 14px, $color: $black, $weight: normal, $fontStyle: normal) {
+	font-family: 'Montserrat', sans-serif;
+	color: $color;
+	font-weight: $weight;
+	font-style: $fontStyle;
+	font-size: $fontSize;
+}
 
 @mixin authPage($bgImg:'../../images/logInImg.png', $bgColor: #fff, $bgPos:'right', $innerDivPos: flex-start){
 	background-image: url($bgImg);

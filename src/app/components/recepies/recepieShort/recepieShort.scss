@@ -30,16 +30,4 @@
 	&_author{
 		@include NunitoFont(12px, $darkGrey, 400);
 	}
-	&_metrics{
-		display: block;
-		@include RobotoFont(12px, $darkText);
-		padding: 10px 0;
-	}
-	&_likes{
-		width: 100%;
-		display:flex;
-		flex-direction: row;
-		align-items: baseline;
-		justify-content: space-between;
-	}
 }

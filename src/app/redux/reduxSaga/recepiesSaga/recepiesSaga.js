@@ -5,6 +5,13 @@ import postNewRecepie from '../../../services/recepies/postNewRecepie';
 import addLikeToRecepie from '../../../services/recepies/addLikeToRecepie';
 import removeLikeFromRecepie from '../../../services/recepies/removeLikeFromRecepie';
 import recepieViewed from '../../../services/recepies/recepieViewed';
+// import getRecipeComments from '../../../services/comments/getComments';
+
+// function* fetchRecepieCommentsSaga({ payload }) {
+// 	const { recepieId } = payload;
+// 	const comments = yield getRecipeComments(recepieId);
+// 	yield put(GET_RECEPIE_COMMENTS_SUCCESS(comments));
+// }
 
 function* recepieViewedSaga({ payload }) {
 	const myPayload = yield call(recepieViewed, payload.recepieId);

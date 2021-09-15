@@ -1,0 +1,90 @@
+"filename", "language", "SCSS", "JavaScript", "JavaScript React", "HTML", "JSON", "comment", "blank", "total"
+"d:\iTechArtFinalProject\.eslintrc.js", "JavaScript", 0, 17, 0, 0, 0, 0, 1, 18
+"d:\iTechArtFinalProject\.prettierrc", "JSON", 0, 0, 0, 0, 11, 0, 0, 11
+"d:\iTechArtFinalProject\db.json", "JSON", 0, 0, 0, 0, 253, 0, 0, 253
+"d:\iTechArtFinalProject\package-lock.json", "JSON", 0, 0, 0, 0, 24450, 0, 1, 24451
+"d:\iTechArtFinalProject\package.json", "JSON", 0, 0, 0, 0, 83, 0, 1, 84
+"d:\iTechArtFinalProject\src\app\app.jsx", "JavaScript React", 0, 0, 57, 0, 0, 0, 4, 61
+"d:\iTechArtFinalProject\src\app\components\auth\authForm\authForm.jsx", "JavaScript React", 0, 0, 91, 0, 0, 0, 10, 101
+"d:\iTechArtFinalProject\src\app\components\auth\authForm\authForm.scss", "SCSS", 63, 0, 0, 0, 0, 0, 4, 67
+"d:\iTechArtFinalProject\src\app\components\auth\authSectionMessage\authSectionMessage.jsx", "JavaScript React", 0, 0, 18, 0, 0, 0, 2, 20
+"d:\iTechArtFinalProject\src\app\components\auth\authSectionMessage\authSectionMessage.scss", "SCSS", 13, 0, 0, 0, 0, 0, 0, 13
+"d:\iTechArtFinalProject\src\app\components\auth\changepasswordForm\changePassword.jsx", "JavaScript React", 0, 0, 92, 0, 0, 0, 10, 102
+"d:\iTechArtFinalProject\src\app\components\auth\logInSection\logIn.jsx", "JavaScript React", 0, 0, 10, 0, 0, 0, 3, 13
+"d:\iTechArtFinalProject\src\app\components\auth\logInSection\logIn.scss", "SCSS", 3, 0, 0, 0, 0, 0, 0, 3
+"d:\iTechArtFinalProject\src\app\components\auth\signUpSection\signUp.jsx", "JavaScript React", 0, 0, 10, 0, 0, 0, 2, 12
+"d:\iTechArtFinalProject\src\app\components\auth\signUpSection\signUp.scss", "SCSS", 3, 0, 0, 0, 0, 0, 0, 3
+"d:\iTechArtFinalProject\src\app\components\headerAndFooter\footer\footer.jsx", "JavaScript React", 0, 0, 33, 0, 0, 0, 3, 36
+"d:\iTechArtFinalProject\src\app\components\headerAndFooter\footer\footer.scss", "SCSS", 35, 0, 0, 0, 0, 0, 1, 36
+"d:\iTechArtFinalProject\src\app\components\headerAndFooter\header\header.jsx", "JavaScript React", 0, 0, 40, 0, 0, 0, 2, 42
+"d:\iTechArtFinalProject\src\app\components\headerAndFooter\header\header.scss", "SCSS", 59, 0, 0, 0, 0, 0, 9, 68
+"d:\iTechArtFinalProject\src\app\components\lists\recepiesList.jsx", "JavaScript React", 0, 0, 13, 0, 0, 0, 2, 15
+"d:\iTechArtFinalProject\src\app\components\mainPage\banner\banner.jsx", "JavaScript React", 0, 0, 18, 0, 0, 0, 2, 20
+"d:\iTechArtFinalProject\src\app\components\mainPage\banner\banner.scss", "SCSS", 32, 0, 0, 0, 0, 0, 3, 35
+"d:\iTechArtFinalProject\src\app\components\mainPage\cookBook\cookBook.jsx", "JavaScript React", 0, 0, 18, 0, 0, 0, 2, 20
+"d:\iTechArtFinalProject\src\app\components\mainPage\cookBook\cookBook.scss", "SCSS", 33, 0, 0, 0, 0, 0, 0, 33
+"d:\iTechArtFinalProject\src\app\components\mainPage\mainPage.jsx", "JavaScript React", 0, 0, 21, 0, 0, 0, 2, 23
+"d:\iTechArtFinalProject\src\app\components\mainPage\mainSection\mainSection.jsx", "JavaScript React", 0, 0, 14, 0, 0, 0, 2, 16
+"d:\iTechArtFinalProject\src\app\components\mainPage\mainSection\mainSection.scss", "SCSS", 7, 0, 0, 0, 0, 0, 0, 7
+"d:\iTechArtFinalProject\src\app\components\mainPage\pickedArticles\pickedArticles.jsx", "JavaScript React", 0, 0, 30, 0, 0, 0, 2, 32
+"d:\iTechArtFinalProject\src\app\components\mainPage\pickedArticles\pickedArticles.scss", "SCSS", 42, 0, 0, 0, 0, 0, 1, 43
+"d:\iTechArtFinalProject\src\app\components\mainPage\popularCookBooks\popularCookBooks.jsx", "JavaScript React", 0, 0, 11, 0, 0, 0, 3, 14
+"d:\iTechArtFinalProject\src\app\components\mainPage\popularCookBooks\popularCookbook.scss", "SCSS", 6, 0, 0, 0, 0, 0, 0, 6
+"d:\iTechArtFinalProject\src\app\components\mainPage\trendingRecepies\trandingRecepies.jsx", "JavaScript React", 0, 0, 11, 0, 0, 0, 2, 13
+"d:\iTechArtFinalProject\src\app\components\mainPage\trendingRecepies\trandingRecepies.scss", "SCSS", 7, 0, 0, 0, 0, 0, 0, 7
+"d:\iTechArtFinalProject\src\app\components\profile\profileInfo\profileActions\profileActions.jsx", "JavaScript React", 0, 0, 33, 0, 0, 0, 4, 37
+"d:\iTechArtFinalProject\src\app\components\profile\profileInfo\profileActions\profileActions.scss", "SCSS", 45, 0, 0, 0, 0, 0, 0, 45
+"d:\iTechArtFinalProject\src\app\components\profile\profileInfo\profileDescr\profileDescription.jsx", "JavaScript React", 0, 0, 18, 0, 0, 0, 4, 22
+"d:\iTechArtFinalProject\src\app\components\profile\profileInfo\profileDescr\profileDescription.scss", "SCSS", 27, 0, 0, 0, 0, 0, 0, 27
+"d:\iTechArtFinalProject\src\app\components\profile\profileInfo\profileInfo.jsx", "JavaScript React", 0, 0, 16, 0, 0, 13, 2, 31
+"d:\iTechArtFinalProject\src\app\components\profile\profileInfo\profileInfo.scss", "SCSS", 16, 0, 0, 0, 0, 0, 0, 16
+"d:\iTechArtFinalProject\src\app\components\profile\profileMenu\profileMenu.jsx", "JavaScript React", 0, 0, 55, 0, 0, 0, 3, 58
+"d:\iTechArtFinalProject\src\app\components\profile\profileMenu\profilemenu.scss", "SCSS", 26, 0, 0, 0, 0, 0, 0, 26
+"d:\iTechArtFinalProject\src\app\components\profile\profilePage.jsx", "JavaScript React", 0, 0, 10, 0, 0, 0, 2, 12
+"d:\iTechArtFinalProject\src\app\components\profile\profilePage.scss", "SCSS", 9, 0, 0, 0, 0, 0, 1, 10
+"d:\iTechArtFinalProject\src\app\components\recepies\recepieFull.jsx", "JavaScript React", 0, 0, 32, 0, 0, 12, 4, 48
+"d:\iTechArtFinalProject\src\app\components\recepies\recepieShort\recepieShort.jsx", "JavaScript React", 0, 0, 40, 0, 0, 0, 2, 42
+"d:\iTechArtFinalProject\src\app\components\recepies\recepieShort\recepieShort.scss", "SCSS", 45, 0, 0, 0, 0, 0, 0, 45
+"d:\iTechArtFinalProject\src\app\components\recepies\recipeCreation\recipeCreation.jsx", "JavaScript React", 0, 0, 181, 0, 0, 3, 3, 187
+"d:\iTechArtFinalProject\src\app\components\recepies\recipeCreation\recipeCreation.scss", "SCSS", 134, 0, 0, 0, 0, 0, 0, 134
+"d:\iTechArtFinalProject\src\app\components\recepies\recipeLikeBtn\recipeLikeBtn.jsx", "JavaScript React", 0, 0, 32, 0, 0, 2, 3, 37
+"d:\iTechArtFinalProject\src\app\components\recepies\recipeLikeBtn\recipeLikeBtn.scss", "SCSS", 21, 0, 0, 0, 0, 0, 0, 21
+"d:\iTechArtFinalProject\src\app\components\recepies\recipeLikeBtn\recipeLikeBtnForUnlogged.jsx", "JavaScript React", 0, 0, 22, 0, 0, 0, 2, 24
+"d:\iTechArtFinalProject\src\app\components\recepies\recipes.scss", "SCSS", 3, 0, 0, 0, 0, 0, 0, 3
+"d:\iTechArtFinalProject\src\app\components\search\cooksBookSearch\cookBookSearch.jsx", "JavaScript React", 0, 0, 11, 0, 0, 0, 2, 13
+"d:\iTechArtFinalProject\src\app\components\search\cooksBookSearch\cookBookSearch.scss", "SCSS", 6, 0, 0, 0, 0, 0, 0, 6
+"d:\iTechArtFinalProject\src\app\components\search\recepiesSearch\recepiesSearch.jsx", "JavaScript React", 0, 0, 11, 0, 0, 0, 2, 13
+"d:\iTechArtFinalProject\src\app\components\search\recepiesSearch\recepiesSearch.scss", "SCSS", 6, 0, 0, 0, 0, 0, 0, 6
+"d:\iTechArtFinalProject\src\app\components\search\searchSection.jsx", "JavaScript React", 0, 0, 18, 0, 0, 0, 2, 20
+"d:\iTechArtFinalProject\src\app\components\search\searchSection.scss", "SCSS", 38, 0, 0, 0, 0, 0, 2, 40
+"d:\iTechArtFinalProject\src\app\redux\booksSlice\booksSlice.js", "JavaScript", 0, 27, 0, 0, 0, 0, 3, 30
+"d:\iTechArtFinalProject\src\app\redux\recepiesSlice\recepiesSlice.js", "JavaScript", 0, 36, 0, 0, 0, 0, 3, 39
+"d:\iTechArtFinalProject\src\app\redux\reduxSaga\booksSaga\booksSaga.js", "JavaScript", 0, 10, 0, 0, 0, 0, 3, 13
+"d:\iTechArtFinalProject\src\app\redux\reduxSaga\recepiesSaga\recepiesSaga.js", "JavaScript", 0, 34, 0, 0, 0, 0, 4, 38
+"d:\iTechArtFinalProject\src\app\redux\reduxSaga\sagas.js", "JavaScript", 0, 7, 0, 0, 0, 0, 2, 9
+"d:\iTechArtFinalProject\src\app\redux\reduxSaga\usersSaga\userSaga.js", "JavaScript", 0, 37, 0, 0, 0, 0, 6, 43
+"d:\iTechArtFinalProject\src\app\redux\store.js", "JavaScript", 0, 17, 0, 0, 0, 0, 5, 22
+"d:\iTechArtFinalProject\src\app\redux\userSlice\userSlice.js", "JavaScript", 0, 27, 0, 0, 0, 0, 3, 30
+"d:\iTechArtFinalProject\src\app\services\getBooksData.js", "JavaScript", 0, 8, 0, 0, 0, 0, 1, 9
+"d:\iTechArtFinalProject\src\app\services\recepies\addLikeToRecepie.js", "JavaScript", 0, 14, 0, 0, 0, 0, 1, 15
+"d:\iTechArtFinalProject\src\app\services\recepies\getRecepiesData.js", "JavaScript", 0, 8, 0, 0, 0, 0, 0, 8
+"d:\iTechArtFinalProject\src\app\services\recepies\postNewRecepie.js", "JavaScript", 0, 15, 0, 0, 0, 0, 2, 17
+"d:\iTechArtFinalProject\src\app\services\recepies\recepieViewed.js", "JavaScript", 0, 14, 0, 0, 0, 0, 0, 14
+"d:\iTechArtFinalProject\src\app\services\recepies\removeLikeFromRecepie.js", "JavaScript", 0, 14, 0, 0, 0, 0, 0, 14
+"d:\iTechArtFinalProject\src\app\services\users\addLikedRecipe.js", "JavaScript", 0, 14, 0, 0, 0, 0, 0, 14
+"d:\iTechArtFinalProject\src\app\services\users\removeLikedRecipe.js", "JavaScript", 0, 14, 0, 0, 0, 0, 0, 14
+"d:\iTechArtFinalProject\src\app\services\users\usersFetch.js", "JavaScript", 0, 50, 0, 0, 0, 0, 5, 55
+"d:\iTechArtFinalProject\src\app\validations\recipesValidation.js", "JavaScript", 0, 6, 0, 0, 0, 0, 3, 9
+"d:\iTechArtFinalProject\src\app\validations\userAuthValidation.js", "JavaScript", 0, 31, 0, 0, 0, 0, 5, 36
+"d:\iTechArtFinalProject\src\index.html", "HTML", 0, 0, 0, 15, 0, 0, 3, 18
+"d:\iTechArtFinalProject\src\index.jsx", "JavaScript React", 0, 0, 12, 0, 0, 0, 2, 14
+"d:\iTechArtFinalProject\src\styles\common\commonStyles.scss", "SCSS", 8, 0, 0, 0, 0, 0, 0, 8
+"d:\iTechArtFinalProject\src\styles\reset.scss", "SCSS", 133, 0, 0, 0, 0, 0, 10, 143
+"d:\iTechArtFinalProject\src\styles\style.scss", "SCSS", 29, 0, 0, 0, 0, 0, 1, 30
+"d:\iTechArtFinalProject\src\styles\vars\colors.scss", "SCSS", 13, 0, 0, 0, 0, 0, 0, 13
+"d:\iTechArtFinalProject\src\styles\vars\mixins.scss", "SCSS", 32, 0, 0, 0, 0, 0, 2, 34
+"d:\iTechArtFinalProject\src\styles\vars\vars.scss", "SCSS", 0, 0, 0, 0, 0, 0, 1, 1
+"d:\iTechArtFinalProject\webpack.config.js", "JavaScript", 0, 7, 0, 0, 0, 0, 2, 9
+"d:\iTechArtFinalProject\webpack.dev.js", "JavaScript", 0, 49, 0, 0, 0, 0, 1, 50
+"d:\iTechArtFinalProject\webpack.prod.js", "JavaScript", 0, 53, 0, 0, 0, 0, 1, 54
+"Total", "-", 894, 509, 978, 15, 24797, 30, 181, 27404
