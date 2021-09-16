@@ -8,11 +8,12 @@ export const commentsSlice = createSlice({
 	reducers: {
 		GET_RECEPIE_COMMENTS() { },
 		GET_RECEPIE_COMMENTS_SUCCESS: (state, action) => {
-			state.comments = action.payload;
-		}
+			state.comments = (action.payload).reverse();
+		},
+		ADD_RECEPIE_COMMENT() { },
 	}
 })
 
-export const { GET_RECEPIE_COMMENTS, GET_RECEPIE_COMMENTS_SUCCESS } = commentsSlice.actions
+export const { GET_RECEPIE_COMMENTS, GET_RECEPIE_COMMENTS_SUCCESS, ADD_RECEPIE_COMMENT } = commentsSlice.actions
 
 export default commentsSlice.reducer

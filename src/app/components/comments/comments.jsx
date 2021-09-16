@@ -4,6 +4,8 @@ import SingleComment from './singleComment/singleComment';
 import AddCommentForm from './addCommentForm/addCommentForm';
 
 const Comments = ({ comments, postId }) => {
+	const user = useSelector((state) => state.user);
+	const { logged } = user;
 	const commentsToShow = comments?.map((comment) => (
 		<SingleComment key={comment.id} comment={comment} />
 	));
@@ -15,7 +17,7 @@ const Comments = ({ comments, postId }) => {
 		<section className="comments-section">
 			{/* {JSON.stringify(recipe)} */}
 			<h2 className="comments-section_title">Comments</h2>
-			<AddCommentForm />
+			{logged ? <AddCommentForm postId={postId} /> : null}
 			{commentsToShow}
 		</section>
 	);

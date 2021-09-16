@@ -21,23 +21,11 @@ const RecipeLikeBtn = ({ postId }) => {
 		dispatch(RECEPIE_UNLIKED({ postId, userId: user.id }));
 	};
 	return liked ? (
-		<button
-			type="button"
-			className="recipe-like-button"
-			onClick={() => {
-				onLikeRemove();
-			}}
-		>
+		<button type="button" className="recipe-like-button" onClick={onLikeRemove}>
 			❤️
 		</button>
 	) : (
-		<button
-			type="button"
-			className="recipe-like-button"
-			onClick={() => {
-				onLikeAdd();
-			}}
-		>
+		<button type="button" className="recipe-like-button" onClick={onLikeAdd}>
 			🤍
 		</button>
 	);

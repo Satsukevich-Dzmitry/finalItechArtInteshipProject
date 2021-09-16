@@ -42,7 +42,7 @@
       "id": "1",
       "title": "Fresh meat recepie",
       "author": "John Doe",
-      "views": 12035,
+      "views": 12133,
       "likes": 503,
       "commentsCount": 12,
       "img": "mostPopularCookbook.png",
@@ -52,7 +52,7 @@
       "id": "2",
       "title": "Fresh meat recepie",
       "author": "John Doe",
-      "views": 12007,
+      "views": 12008,
       "likes": 500,
       "commentsCount": 12,
       "img": "./images/mostPopularCookbook.png",
@@ -62,8 +62,8 @@
       "id": "3",
       "title": "Fresh meat recepie",
       "author": "John Doe",
-      "views": 12002,
-      "likes": 503,
+      "views": 12007,
+      "likes": 504,
       "commentsCount": 12,
       "img": "./images/mostPopularCookbook.png",
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam dolorum deleniti fuga assumenda sequi sint."
@@ -72,7 +72,7 @@
       "id": "4",
       "title": "Fresh meat recepie",
       "author": "John Doe",
-      "views": 12003,
+      "views": 12005,
       "likes": 500,
       "commentsCount": 12,
       "img": "./images/mostPopularCookbook.png",
@@ -89,7 +89,7 @@
       "author": "Dzmitry",
       "id": "0_x9fi-fi6H9rgtkwATZi",
       "likes": 1,
-      "views": 84,
+      "views": 85,
       "commentsCount": 0
     },
     {
@@ -120,9 +120,9 @@
       "authorId": 15,
       "author": "Dzmitry2@mail.com",
       "id": "xwzq6_LUpG0yqWULQo45r",
-      "likes": 0,
+      "likes": 1,
       "commentsCount": 0,
-      "views": 0
+      "views": 1
     },
     {
       "title": "Recipe from new user",
@@ -134,9 +134,9 @@
       "authorId": 17,
       "author": "dzmitry4@mail.com",
       "id": "nfDL01yQvEu33t8-xPxUm",
-      "likes": 2,
-      "commentsCount": 0,
-      "views": 6
+      "likes": 1,
+      "commentsCount": 2,
+      "views": 10
     },
     {
       "title": "Test for files",
@@ -151,7 +151,7 @@
       "id": "-XKvwH4UXvWFd8UR5Ww8e",
       "likes": 1,
       "commentsCount": 0,
-      "views": 21
+      "views": 26
     },
     {
       "title": "Almost real lorem recipe",
@@ -169,7 +169,7 @@
       "id": "qyh1GDVLc4O29d5oRD7IQ",
       "likes": 0,
       "commentsCount": 0,
-      "views": 38
+      "views": 44
     }
   ],
   "cookBookComments": [
@@ -184,25 +184,92 @@
       "id": "1",
       "body": "some comment",
       "postId": "1",
+      "creationTime": 1620783450241,
       "authorId": "14"
     },
     {
       "id": "2",
       "body": "some comment other comment",
       "postId": "1",
+      "creationTime": 1631672450241,
       "authorId": "14"
     },
     {
       "id": "3",
       "body": "and another",
       "postId": "1",
+      "creationTime": 1631783450241,
       "authorId": "14"
     },
     {
       "id": "4",
       "body": "nope",
       "postId": "3",
+      "creationTime": 1631783450241,
       "authorId": "14"
+    },
+    {
+      "id": "2R7mMYSnbC0hGnZoC8iyW",
+      "body": "new comment",
+      "postId": "1",
+      "creationTime": 1631783450241,
+      "authorId": "14"
+    },
+    {
+      "body": "First full working comment",
+      "postId": "1",
+      "authorId": 14,
+      "creationTime": 1631783450241,
+      "id": "3oKZM079hTCdEfpGq8ofG"
+    },
+    {
+      "body": "new one",
+      "postId": "1",
+      "authorId": 14,
+      "creationTime": 1631792460241,
+      "id": "dOvqN9QEbtF2Mxf1i9Ptq"
+    },
+    {
+      "body": "Files seems broken with json-server",
+      "postId": "-XKvwH4UXvWFd8UR5Ww8e",
+      "authorId": 14,
+      "creationTime": 1631794039550,
+      "id": "_Op5w0JlVzEn0zIXmXFYv"
+    },
+    {
+      "body": "and another",
+      "postId": "1",
+      "authorId": 14,
+      "creationTime": 1631794568608,
+      "id": "7jQZGZn3lq4zP-AUmYi_j"
+    },
+    {
+      "body": "test counter of comments",
+      "postId": "1",
+      "authorId": 14,
+      "creationTime": 1631794779620,
+      "id": "hWbbFfNwqQpJHYbzRp7kP"
+    },
+    {
+      "body": "Full test of comments",
+      "postId": "nfDL01yQvEu33t8-xPxUm",
+      "authorId": 14,
+      "creationTime": 1631794902944,
+      "id": "GpgLOaCFvGZSWL3KVKi9l"
+    },
+    {
+      "body": "another test",
+      "postId": "nfDL01yQvEu33t8-xPxUm",
+      "authorId": 14,
+      "creationTime": 1631794972971,
+      "id": "4hqXOek2nJgDIIgkZl0A6"
+    },
+    {
+      "body": "new test",
+      "postId": "nfDL01yQvEu33t8-xPxUm",
+      "authorId": 14,
+      "creationTime": 1631795022336,
+      "id": "7M2bQDa6uPXeYVlCnhd9-"
     }
   ],
   "users": [
@@ -281,7 +348,8 @@
       "userName": "Dzmitry",
       "likedRecipes": [
         "-XKvwH4UXvWFd8UR5Ww8e",
-        "nfDL01yQvEu33t8-xPxUm"
+        "3",
+        "xwzq6_LUpG0yqWULQo45r"
       ]
     },
     {
