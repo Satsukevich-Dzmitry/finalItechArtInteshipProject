@@ -1,4 +1,5 @@
 const postNewRecepie = async (payload) => {
+	console.log(payload);
 	const response = await fetch(`http://localhost:3000/recepies`, {
 		method: 'POST',
 		headers: {

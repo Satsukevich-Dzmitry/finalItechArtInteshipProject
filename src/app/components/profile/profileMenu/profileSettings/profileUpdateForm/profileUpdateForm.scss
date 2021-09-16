@@ -1,0 +1,36 @@
+.profile-update-form{
+	width:100%;
+	display: flex;
+	align-items: center;
+	gap: 20px;
+	&_input{
+		width: 25%;
+		height: 40px;
+		box-sizing: border-box;
+		border: 1px solid #DADADA;
+		border-radius: 10px;
+		@include NunitoFont(16px, $black);
+		&__is-invalid{
+			position: relative;
+			::before{
+				content: 'Incorrect email';
+				@include NunitoFont(16px, $errorColor);
+				position: absolute;
+				top: 0;
+				left: 0;
+				transform: translate(-100%, 0);
+			}
+		}
+	}
+	&_btn{
+		width:40px;
+		height: 40px;
+		border: none;
+		background-color: $yellow;
+		color: $white;
+		border-radius: 10px;
+		&:disabled{
+			background-color: darken($yellow, 10%);
+		}
+	}
+}

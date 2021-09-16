@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 const ProfileDescription = () => {
 	const userInfo = useSelector(({ user }) => user?.user);
 
-	const { username, email, userDescription } = userInfo;
+	const { username, email, description } = userInfo;
 
 	return (
 		<div className="profile-description">
@@ -12,7 +12,7 @@ const ProfileDescription = () => {
 			<div className="profile-description_info">
 				<h2 className="profile-description_info_name">{username || email}</h2>
 				<p className="profile-description_info_descr">
-					{userDescription || 'No info yet'}
+					{description || 'No info yet'}
 				</p>
 			</div>
 		</div>

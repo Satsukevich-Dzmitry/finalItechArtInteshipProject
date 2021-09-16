@@ -1,12 +1,23 @@
 import { createSlice } from '@reduxjs/toolkit'
 
+const normalInitialState = {
+	logged: false,
+	user: null,
+	authToken: null,
+}
+const testingInitialState = {
+	logged: true,
+	user: {
+		id: 14,
+		userName: 'Dzmitry',
+		email: "dima@mail.com",
+		likedRecipes: ["-XKvwH4UXvWFd8UR5Ww8e", "3", "xwzq6_LUpG0yqWULQo45r"],
+		description: "My new profile Descrition"
+	}
+}
 export const userSlice = createSlice({
 	name: 'USER',
-	initialState: {
-		logged: false,
-		user: null,
-		authToken: null,
-	},
+	initialState: testingInitialState,
 	reducers: {
 		USER_LOGGED: (state, action) => {
 			state.logged = true;
@@ -21,10 +32,14 @@ export const userSlice = createSlice({
 		},
 		USER_UNLIKED_RECIPE: (state, action) => {
 			state.user.likedRecipes = action.payload;
-		}
+		},
+		USER_UPDATE_PROFILE: () => { },
+		USER_UPDATE_PROFILE_SUCCESS: (state, action) => {
+			state.user[action.payload.propToUpdate] = action.payload.newPropValue;
+		},
 	}
 })
 
-export const { USER_LOGGED, USER_LOGGING, USER_PASSWORD_CHANGING, USER_PASSWORD_RESTORING, USER_LIKED_RECIPE, USER_UNLIKED_RECIPE } = userSlice.actions
+export const { USER_LOGGED, USER_LOGGING, USER_PASSWORD_CHANGING, USER_PASSWORD_RESTORING, USER_LIKED_RECIPE, USER_UNLIKED_RECIPE, USER_UPDATE_PROFILE, USER_UPDATE_PROFILE_SUCCESS } = userSlice.actions
 
 export default userSlice.reducer

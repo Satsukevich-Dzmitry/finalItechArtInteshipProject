@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
 import RecepiesList from '../../lists/recepiesList';
-import ChangePasswordForm from '../../auth/changepasswordForm/changePassword';
+import ProfileSettings from './profileSettings/profileSettings';
 
 const ProfileMenu = () => {
 	const [activeTab, setActiveTab] = useState(0);
 	const { id } = useSelector((state) => state.user?.user);
 	const tabs = [
-		<RecepiesList id={id} />,
-		<RecepiesList id={id} />,
-		<RecepiesList id={id} />,
+		<RecepiesList key="CookBooks" id={id} />,
+		<RecepiesList key="Recepies" id={id} />,
+		<ProfileSettings key="Settings" />,
 	];
 
 	return (
@@ -50,7 +50,6 @@ const ProfileMenu = () => {
 					}
 				})}
 			</div>
-			<ChangePasswordForm />
 		</section>
 	);
 };

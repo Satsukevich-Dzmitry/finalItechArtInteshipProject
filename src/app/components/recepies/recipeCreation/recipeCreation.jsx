@@ -17,7 +17,7 @@ const RecipeCreation = () => {
 			author: userName || email,
 			id: nanoid(),
 			likes: 0,
-			comments: 0,
+			commentsCount: 0,
 			views: 0,
 		};
 		dispatch(POST_RECEPIE_REQUEST(payload));

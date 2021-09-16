@@ -5,6 +5,8 @@ const userLoginValidation = Yup.object({
 	password: Yup.string().required('Required'),
 });
 
+const userEmailValidation = Yup.object({ newPropValue: Yup.string().email('Invalid email address').required('Required'), })
+
 const userSignInValidation = Yup.object({
 	email: Yup.string().email('Invalid email address').required('Required'),
 	password: Yup.string()
@@ -32,4 +34,4 @@ const passwordChangeValidation = Yup.object({
 	}),
 });
 
-export { userLoginValidation, userSignInValidation, passwordChangeValidation };
+export { userLoginValidation, userSignInValidation, passwordChangeValidation, userEmailValidation };

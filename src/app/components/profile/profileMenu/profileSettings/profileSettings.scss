@@ -1,0 +1,51 @@
+@import './profileUpdateForm/profileUpdateForm';
+.profile-settings{
+	width: 1110px;
+	border-radius: 8px;
+	background-color: $white;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap:30px;
+	padding: 30px;
+	box-sizing: border-box;
+	&_header{
+		@include NunitoFont(24px, $black, bold);
+	}
+	&-content{
+		width: 100%;
+		display: grid;
+		grid-template-columns: 150px 1fr;
+		align-items: center;
+		gap: 25px 0;
+		&-subtitle{
+			@include NunitoFont(16px, $black);
+		}
+		&-info{
+			@include NunitoFont(16px, $black);
+			display: flex;
+			align-items: center;
+			gap: 20px;
+			&_change-btn{
+				border: none;
+				background-color: transparent;
+				@include NunitoFont(16px, $yellow);
+				&:hover{
+					color: lighten($yellow, 15%);
+					cursor: pointer;
+				}
+			}
+			&_password-change-btn{
+				border: 1px solid $black;
+				background-color: transparent;
+				padding: 9px 15px;
+				border-radius: 8px;
+				@include NunitoFont(16px, $black);
+				&:hover{
+					border: 1px solid $yellow;
+					cursor: pointer;
+				}
+			}
+		}
+	}
+}

@@ -168,8 +168,38 @@
       "author": "Dzmitry",
       "id": "qyh1GDVLc4O29d5oRD7IQ",
       "likes": 0,
-      "commentsCount": 0,
-      "views": 44
+      "commentsCount": 1,
+      "views": 45
+    },
+    {
+      "title": "Another testing recepie",
+      "description": "Some big description attached",
+      "ingredients": [
+        "once again we are here",
+        "and can we make it right?",
+        "Yes, we can"
+      ],
+      "directions": "be happy and smile",
+      "authorId": 14,
+      "author": "Dzmitry",
+      "id": "6QGb2XC0BNf_BoN29YWsC",
+      "likes": 1,
+      "views": 4,
+      "commentsCount": 1
+    },
+    {
+      "title": "fixing comments",
+      "description": "safafasfa",
+      "ingredients": [
+        "gas"
+      ],
+      "directions": "gsagasg",
+      "authorId": 14,
+      "author": "Dzmitry",
+      "id": "AVwR5BZoiA0PLcS42Y-kp",
+      "likes": 1,
+      "commentsCount": 1,
+      "views": 1
     }
   ],
   "cookBookComments": [
@@ -270,6 +300,27 @@
       "authorId": 14,
       "creationTime": 1631795022336,
       "id": "7M2bQDa6uPXeYVlCnhd9-"
+    },
+    {
+      "body": "So lets try something",
+      "postId": "qyh1GDVLc4O29d5oRD7IQ",
+      "authorId": 14,
+      "creationTime": 1631828980349,
+      "id": "9W3zodeeS-ebwUqCCJPCE"
+    },
+    {
+      "body": "And comment of course",
+      "postId": "6QGb2XC0BNf_BoN29YWsC",
+      "authorId": 14,
+      "creationTime": 1631829082243,
+      "id": "LQccM1ulO_VN-bNyQxC4y"
+    },
+    {
+      "body": "Hope i fixed it",
+      "postId": "AVwR5BZoiA0PLcS42Y-kp",
+      "authorId": 14,
+      "creationTime": 1631829532895,
+      "id": "a7Knlmi-MgImzLo2Wrn9Q"
     }
   ],
   "users": [
@@ -343,14 +394,17 @@
     },
     {
       "email": "dima@mail.com",
-      "password": "$2a$10$ztqh837KVL.iGOhA3UczhOvAYaW8HofFyzrLh2ELvydEiuK2t7fj6",
+      "password": "$2a$10$ZCbOZhkP3KfVHPNOZ6sTsuywpLGKGepYTTWh.GXc2ogCzhtT5yTEm",
       "id": 14,
       "userName": "Dzmitry",
       "likedRecipes": [
         "-XKvwH4UXvWFd8UR5Ww8e",
         "3",
-        "xwzq6_LUpG0yqWULQo45r"
-      ]
+        "xwzq6_LUpG0yqWULQo45r",
+        "6QGb2XC0BNf_BoN29YWsC",
+        "AVwR5BZoiA0PLcS42Y-kp"
+      ],
+      "description": "My new profile Descrition"
     },
     {
       "email": "Dzmitry2@mail.com",
