@@ -33,6 +33,7 @@
 	justify-content: space-around;
 	align-items: center;
 	&>div{
+		padding: 15px;
 		width:1100px;
 		display:flex;
 		justify-content: $innerDivPos;

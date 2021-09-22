@@ -1,5 +1,5 @@
 import React from 'react';
-import AuthForm from '../authForm/authForm';
+import AuthForm from '../authForm/AuthForm';
 
 const LogIn = () => (
 	<section className="login-section">

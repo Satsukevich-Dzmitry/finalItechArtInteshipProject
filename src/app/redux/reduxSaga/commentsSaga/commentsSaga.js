@@ -1,5 +1,5 @@
 import { takeEvery, put, call } from 'redux-saga/effects';
-import { nanoid } from '@reduxjs/toolkit'
+import { nanoid } from '@reduxjs/toolkit';
 import { GET_RECEPIE_COMMENTS, GET_RECEPIE_COMMENTS_SUCCESS, ADD_RECEPIE_COMMENT } from '../../commentsSlice/commentsSlice';
 import getRecipeComments from '../../../services/comments/recipeComments/getComments';
 import postComment from '../../../services/comments/recipeComments/postComment';

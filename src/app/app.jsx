@@ -3,17 +3,17 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { GET_BOOKS_REQUEST } from './redux/booksSlice/booksSlice';
 import { GET_RECEPIES_REQUEST } from './redux/recepiesSlice/recepiesSlice';
-import MainPage from './components/mainPage/mainPage';
-import LogIn from './components/auth/logInSection/logIn';
-import SignUp from './components/auth/signUpSection/signUp';
-import Header from './components/headerAndFooter/header/header';
-import Footer from './components/headerAndFooter/footer/footer';
-import Search from './components/search/searchSection';
-import ProfilePage from './components/profile/profilePage';
-import CookboockSearch from './components/search/cooksBookSearch/cookBookSearch';
-import RecepiesSearch from './components/search/recepiesSearch/recepiesSearch';
-import RecepieFull from './components/recepies/recepieFull/recepieFull';
-import RecipeCreation from './components/recepies/recipeCreation/recipeCreation';
+import MainPage from './components/mainPage/MainPage';
+import LogIn from './components/auth/logInSection/LogIn';
+import SignUp from './components/auth/signUpSection/SignUp';
+import Header from './components/headerAndFooter/header/Header';
+import Footer from './components/headerAndFooter/footer/Footer';
+import Search from './components/search/SearchSection';
+import ProfilePage from './components/profile/ProfilePage';
+import CookboockSearch from './components/search/cooksBookSearch/CookBookSearch';
+import RecepiesSearch from './components/search/recepiesSearch/RecepiesSearch';
+import RecepieFull from './components/recepies/recepieFull/RecepieFull';
+import RecipeCreation from './components/recepies/recipeCreation/RecipeCreation';
 
 const App = () => {
 	const dispatch = useDispatch();

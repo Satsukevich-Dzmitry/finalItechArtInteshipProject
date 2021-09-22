@@ -10,12 +10,13 @@ import {
 	userSignInValidation,
 	passwordChangeValidation,
 } from '../../../validations/userAuthValidation';
+import { getUserStatus } from '../../../selectors/selectors';
 
 const ChangePasswordForm = () => {
 	const history = useHistory();
 	const dispatch = useDispatch();
-	const userObj = useSelector((state) => state.user);
-	const { logged, user } = userObj;
+	const userStatus = useSelector(getUserStatus);
+	const { logged, user } = userStatus;
 
 	const handleSubmit = () => {
 		history.push('/');

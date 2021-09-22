@@ -11,13 +11,13 @@ const testingInitialState = {
 		id: 14,
 		userName: 'Dzmitry',
 		email: "dima@mail.com",
-		likedRecipes: ["-XKvwH4UXvWFd8UR5Ww8e", "3", "xwzq6_LUpG0yqWULQo45r"],
+		likedRecipes: [],
 		description: "My new profile Descrition"
 	}
 }
 export const userSlice = createSlice({
 	name: 'USER',
-	initialState: testingInitialState,
+	initialState: normalInitialState,
 	reducers: {
 		USER_LOGGED: (state, action) => {
 			state.logged = true;

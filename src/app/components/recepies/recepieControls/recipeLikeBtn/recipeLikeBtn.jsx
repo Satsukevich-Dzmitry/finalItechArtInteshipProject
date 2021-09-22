@@ -4,9 +4,10 @@ import {
 	RECEPIE_LIKED,
 	RECEPIE_UNLIKED,
 } from '../../../../redux/recepiesSlice/recepiesSlice';
+import { getUserInfo } from '../../../../selectors/selectors';
 
 const RecipeLikeBtn = ({ postId }) => {
-	const user = useSelector((state) => state.user.user);
+	const user = useSelector(getUserInfo);
 	const { likedRecipes } = user;
 	const likeStatus = likedRecipes.includes(postId);
 	const [liked, setLiked] = useState(likeStatus);

@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
-import RecepiesList from '../../lists/recepiesList';
-import ProfileSettings from './profileSettings/profileSettings';
+import RecepiesList from '../../lists/RecepiesList';
+import ProfileSettings from './profileSettings/ProfileSettings';
+import { getUserInfo } from '../../../selectors/selectors';
 
 const ProfileMenu = () => {
 	const [activeTab, setActiveTab] = useState(0);
-	const { id } = useSelector((state) => state.user?.user);
+	const { id } = useSelector(getUserInfo);
 	const tabs = [
 		<RecepiesList key="CookBooks" id={id} />,
 		<RecepiesList key="Recepies" id={id} />,

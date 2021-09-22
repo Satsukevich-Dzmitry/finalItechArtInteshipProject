@@ -1,12 +1,13 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Formik, Form, Field, FieldArray } from 'formik';
-import { nanoid } from 'nanoid';
+import { nanoid } from '@reduxjs/toolkit';
 import { recipeCreationValidation } from '../../../validations/recipesValidation';
 import { POST_RECEPIE_REQUEST } from '../../../redux/recepiesSlice/recepiesSlice';
+import { getUserStatus } from '../../../selectors/selectors';
 
 const RecipeCreation = () => {
-	const userStatus = useSelector((state) => state.user);
+	const userStatus = useSelector(getUserStatus);
 	const { logged, user } = userStatus;
 	const dispatch = useDispatch();
 	const onSubmit = (values, { setSubmitting, resetForm }) => {
@@ -24,9 +25,9 @@ const RecipeCreation = () => {
 		setSubmitting(false);
 		resetForm();
 	};
-	// if(!logged){
-	// 	return <div>You are not logged in</div>
-	// }
+	if (!logged) {
+		return <div>You are not logged in</div>;
+	}
 	return (
 		<section className="recipe-creation">
 			<h1 className="recipe-creation_header">Create a new recepie</h1>

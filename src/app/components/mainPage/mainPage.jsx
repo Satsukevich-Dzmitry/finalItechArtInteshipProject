@@ -1,9 +1,9 @@
 import React from 'react';
-import Banner from './banner/banner';
-import PopularCookBooks from './popularCookBooks/popularCookBooks';
-import PickedArticles from './pickedArticles/pickedArticles';
-import MainSection from './mainSection/mainSection';
-import TrandingRecepies from './trendingRecepies/trandingRecepies';
+import Banner from './banner/Banner';
+import PopularCookBooks from './popularCookBooks/PopularCookBooks';
+import PickedArticles from './pickedArticles/PickedArticles';
+import MainSection from './mainSection/MainSection';
+import TrandingRecepies from './trendingRecepies/TrandingRecepies';
 
 const MainPage = () => (
 	<>

@@ -6,19 +6,26 @@
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-	justify-content: space-between;
+	gap: 20px;
 	&_img{
 		width: 235px;
+		flex-shrink:0;
 		height: 178px;
 		object-fit: cover;
 	}
-	&_info{
+	&-info{
 		width: 100%;
 		height: 100%;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
 		align-items: flex-start;
+		&_creds{
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			gap:5px;
+		}
 	}
 	&_description{
 		@include NunitoFont(14px, $darkText);

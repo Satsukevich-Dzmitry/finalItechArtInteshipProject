@@ -1,6 +1,6 @@
 import React from 'react';
-import RecipeLikeBtn from './recipeLikeBtn/recipeLikeBtn';
-import RecipeLikeBtnForUnlogged from './recipeLikeBtn/recipeLikeBtnForUnlogged';
+import RecipeLikeBtn from './recipeLikeBtn/RecipeLikeBtn';
+import RecipeLikeBtnForUnlogged from './recipeLikeBtn/RecipeLikeBtnForUnlogged';
 
 const RecepieControls = (props) => {
 	const { logged, postId, likes, commentsCount, views } = props;

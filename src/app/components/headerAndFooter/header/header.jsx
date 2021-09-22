@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-
+import { getUserStatus } from '../../../selectors/selectors';
 const Header = () => {
-	const user = useSelector((state) => state.user);
-	const { logged } = user;
+	const userStatus = useSelector(getUserStatus);
+	const { logged, user } = userStatus;
 	return (
 		<header className="header">
 			<div className="header_content">
@@ -22,7 +22,7 @@ const Header = () => {
 				</nav>
 				{logged ? (
 					<Link to="/profilePage" className="navbar-link">
-						{user.user.email}
+						{user.email}
 					</Link>
 				) : (
 					<section className="header_auth-section">

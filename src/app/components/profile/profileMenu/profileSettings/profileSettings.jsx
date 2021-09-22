@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
-import ChangePasswordForm from '../../../auth/changepasswordForm/changePassword';
-import ModalWindow from '../../../modalWindow/modalWindow';
-import ProfileUpdateForm from './profileUpdateForm/profileUpdateForm';
+import ChangePasswordForm from '../../../auth/changepasswordForm/ChangePassword';
+import ModalWindow from '../../../modalWindow/ModalWindow';
+import ProfileUpdateForm from './profileUpdateForm/ProfileUpdateForm';
+import { getUserInfo } from '../../../../selectors/selectors';
 
 const ProfileSettings = () => {
-	const user = useSelector((state) => state.user?.user);
+	const user = useSelector(getUserInfo);
 	const { userName, email, id, description, password } = user;
 	const [passwordChanging, setPasswordChanging] = useState(false);
 	const [userNameChanging, setUserNameChanging] = useState(false);

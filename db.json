@@ -134,7 +134,7 @@
       "authorId": 17,
       "author": "dzmitry4@mail.com",
       "id": "nfDL01yQvEu33t8-xPxUm",
-      "likes": 1,
+      "likes": 2,
       "commentsCount": 2,
       "views": 10
     },
@@ -149,7 +149,7 @@
       "authorId": 14,
       "author": "Dzmitry",
       "id": "-XKvwH4UXvWFd8UR5Ww8e",
-      "likes": 1,
+      "likes": 2,
       "commentsCount": 0,
       "views": 26
     },
@@ -167,7 +167,7 @@
       "authorId": 14,
       "author": "Dzmitry",
       "id": "qyh1GDVLc4O29d5oRD7IQ",
-      "likes": 0,
+      "likes": 1,
       "commentsCount": 1,
       "views": 45
     },
@@ -183,8 +183,8 @@
       "authorId": 14,
       "author": "Dzmitry",
       "id": "6QGb2XC0BNf_BoN29YWsC",
-      "likes": 1,
-      "views": 4,
+      "likes": 5,
+      "views": 5,
       "commentsCount": 1
     },
     {
@@ -197,9 +197,25 @@
       "authorId": 14,
       "author": "Dzmitry",
       "id": "AVwR5BZoiA0PLcS42Y-kp",
+      "likes": 3,
+      "commentsCount": 2,
+      "views": 7
+    },
+    {
+      "title": "New cool recepie",
+      "description": "Some text",
+      "ingredients": [
+        "html",
+        "head",
+        "body"
+      ],
+      "directions": "Tututututu",
+      "authorId": 18,
+      "author": "AnotherDzmitry",
+      "id": "yw6WMSAvtonKdjWDYFp72",
       "likes": 1,
-      "commentsCount": 1,
-      "views": 1
+      "commentsCount": 0,
+      "views": 0
     }
   ],
   "cookBookComments": [
@@ -321,6 +337,13 @@
       "authorId": 14,
       "creationTime": 1631829532895,
       "id": "a7Knlmi-MgImzLo2Wrn9Q"
+    },
+    {
+      "body": "New comment",
+      "postId": "AVwR5BZoiA0PLcS42Y-kp",
+      "authorId": 14,
+      "creationTime": 1632313643631,
+      "id": "AaCsMKsaiDhll1LbcjH7f"
     }
   ],
   "users": [
@@ -398,10 +421,6 @@
       "id": 14,
       "userName": "Dzmitry",
       "likedRecipes": [
-        "-XKvwH4UXvWFd8UR5Ww8e",
-        "3",
-        "xwzq6_LUpG0yqWULQo45r",
-        "6QGb2XC0BNf_BoN29YWsC",
         "AVwR5BZoiA0PLcS42Y-kp"
       ],
       "description": "My new profile Descrition"
@@ -426,6 +445,18 @@
         "2"
       ],
       "id": 17
+    },
+    {
+      "email": "NoTest@mail.com",
+      "password": "$2a$10$7PhSWEMcYcsMJ1XCm/8FhO0WFYKIEjOgQprAYBksz/O/73GJ6AHha",
+      "likedRecipes": [
+        "yw6WMSAvtonKdjWDYFp72",
+        "6QGb2XC0BNf_BoN29YWsC",
+        "-XKvwH4UXvWFd8UR5Ww8e"
+      ],
+      "id": 18,
+      "userName": "AnotherDzmitry",
+      "description": "Some description"
     }
   ]
 }

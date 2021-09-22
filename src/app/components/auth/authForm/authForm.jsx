@@ -3,7 +3,7 @@ import { Link, useHistory } from 'react-router-dom';
 import { Formik } from 'formik';
 import { useDispatch } from 'react-redux';
 import { USER_LOGGING } from '../../../redux/userSlice/userSlice';
-import AuthSectionMessage from '../authSectionMessage/authSectionMessage';
+import AuthSectionMessage from '../authSectionMessage/AuthSectionMessage';
 import {
 	userLoginValidation,
 	userSignInValidation,
@@ -36,7 +36,7 @@ const AuthForm = (props) => {
 			<h2 className="auth-section_title">
 				Feed<span>Me</span>
 			</h2>
-			<AuthSectionMessage logIn />
+			<AuthSectionMessage logIn={logIn} />
 			<Formik
 				initialValues={{
 					email: '',

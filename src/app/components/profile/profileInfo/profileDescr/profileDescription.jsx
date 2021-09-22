@@ -1,8 +1,9 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
+import { getUserInfo } from '../../../../selectors/selectors';
 
 const ProfileDescription = () => {
-	const userInfo = useSelector(({ user }) => user?.user);
+	const userInfo = useSelector(getUserInfo);
 
 	const { username, email, description } = userInfo;
 

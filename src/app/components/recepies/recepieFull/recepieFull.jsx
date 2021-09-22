@@ -3,23 +3,26 @@ import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { RECEPIE_VIEWED } from '../../../redux/recepiesSlice/recepiesSlice';
 import { GET_RECEPIE_COMMENTS } from '../../../redux/commentsSlice/commentsSlice';
-import RecepieControls from '../recepieControls/recepieControls';
-import IngredientsList from './ingredientsList/ingredientsList';
-import Comments from '../../comments/comments';
+import RecepieControls from '../recepieControls/RecepieControls';
+import IngredientsList from './ingredientsList/IngredientsList';
+import Comments from '../../comments/Comments';
+import {
+	getUserStatus,
+	getRecepiesById,
+	getComments,
+} from '../../../selectors/selectors';
 
 const RecepieFull = ({ match }) => {
 	const dispatch = useDispatch();
+	const { recepieId } = match.params;
 	useEffect(() => {
 		dispatch(RECEPIE_VIEWED({ recepieId }));
 		dispatch(GET_RECEPIE_COMMENTS({ recepieId }));
 	}, []);
-	const { recepieId } = match.params;
-	const recipe = useSelector(({ recepies }) =>
-		recepies.allRecepies.find((recipe) => recipe.id === recepieId)
-	);
-	const userStatus = useSelector((state) => state.user);
+	const recipe = useSelector((state) => getRecepiesById(state, recepieId));
+	const userStatus = useSelector(getUserStatus);
 	const { logged } = userStatus;
-	const { comments } = useSelector((state) => state.comments);
+	const { comments } = useSelector(getComments);
 	if (!recipe) {
 		return <div>Not found...</div>;
 	}

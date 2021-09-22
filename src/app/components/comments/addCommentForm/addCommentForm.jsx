@@ -2,15 +2,16 @@ import React from 'react';
 import { Formik } from 'formik';
 import { useDispatch, useSelector } from 'react-redux';
 import { ADD_RECEPIE_COMMENT } from '../../../redux/commentsSlice/commentsSlice';
+import { getUserStatus } from '../../../selectors/selectors';
 
 const AddCommentForm = ({ postId }) => {
-	const user = useSelector((state) => state.user);
-	const { logged } = user;
+	const userStatus = useSelector(getUserStatus);
+	const { logged, user } = userStatus;
 	const dispatch = useDispatch();
 	if (!logged) {
 		return null;
 	}
-	const { id } = user.user;
+	const { id } = user;
 	return (
 		<Formik
 			initialValues={{ commentBody: '' }}
