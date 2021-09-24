@@ -216,6 +216,66 @@
       "likes": 1,
       "commentsCount": 0,
       "views": 0
+    },
+    {
+      "title": "img test",
+      "description": "text",
+      "ingredients": [
+        "server"
+      ],
+      "directions": "qqqqq",
+      "img": "C:\\fakepath\\avatar.png",
+      "authorId": 14,
+      "author": "Dzmitry",
+      "id": "G6A0wq7Pu3E77W2fGSwSu",
+      "likes": 0,
+      "commentsCount": 0,
+      "views": 0
+    },
+    {
+      "title": "xzcx",
+      "description": "xvgsdgsd",
+      "ingredients": [
+        "hshs"
+      ],
+      "directions": "hsdhsdhs",
+      "img": "C:\\fakepath\\avatar.png",
+      "authorId": 14,
+      "author": "Dzmitry",
+      "id": "ruUk4b6k3-efaCsjG6Ih9",
+      "likes": 0,
+      "commentsCount": 0,
+      "views": 0
+    },
+    {
+      "title": "Another image Test",
+      "description": "some text",
+      "ingredients": [
+        "nndnd"
+      ],
+      "directions": "sadafa",
+      "img": "images/mostPopularCookbook.png",
+      "authorId": 14,
+      "author": "Dzmitry",
+      "id": "TMmI9SGeEoQQvodzPg_8F",
+      "likes": 0,
+      "commentsCount": 0,
+      "views": 4
+    },
+    {
+      "title": "And another test for images",
+      "description": "fafas",
+      "ingredients": [
+        "fasfa"
+      ],
+      "directions": "fasfasgag",
+      "img": "http://localhost:3000/assets/images/avatar.png",
+      "authorId": 14,
+      "author": "Dzmitry",
+      "id": "fp8vnzgBIVWsBgwivTL_M",
+      "likes": 0,
+      "commentsCount": 0,
+      "views": 0
     }
   ],
   "cookBookComments": [

@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import RecipeShort from '../recepies/recepieShort/recepieShort';
+import RecipeShort from '../recepies/recepieShort/RecepieShort';
 import { getRecepiesByAuthorId } from '../../selectors/selectors';
 
 const RecepiesList = ({ id }) => {

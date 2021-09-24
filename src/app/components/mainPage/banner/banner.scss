@@ -22,12 +22,14 @@
 			@include NunitoFont(56px, $white);
 		}
 
-		&-button {
+		&-link {
 			@include NunitoFont(20px, $black, 600);
 			border-radius: 38px;
 			border: none;
 			background-color: $yellow;
-			text-align: center;
+			display: flex;
+			align-items: center;
+			justify-content: center;
 			width: 230px;
 			height: 48px;
 		}

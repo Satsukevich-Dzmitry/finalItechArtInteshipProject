@@ -9,7 +9,11 @@ const ProfileDescription = () => {
 
 	return (
 		<div className="profile-description">
-			<img className="profile-description_img" src="/" alt="user" />
+			<img
+				className="profile-description_img"
+				src="http://localhost:3000/assets/images/avatar-placeholder.gif"
+				alt="user"
+			/>
 			<div className="profile-description_info">
 				<h2 className="profile-description_info_name">{username || email}</h2>
 				<p className="profile-description_info_descr">

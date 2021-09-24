@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Banner = () => (
 	<section className="banner">
@@ -10,9 +11,9 @@ const Banner = () => (
 				<br />
 				Cookbooks And Recipies
 			</h2>
-			<button type="button" className="banner_content-button">
+			<Link to="/signUp" className="banner_content-link">
 				Create Account
-			</button>
+			</Link>
 		</div>
 	</section>
 );

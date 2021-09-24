@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { getUserStatus } from '../../../selectors/selectors';
+
 const Header = () => {
 	const userStatus = useSelector(getUserStatus);
 	const { logged, user } = userStatus;
