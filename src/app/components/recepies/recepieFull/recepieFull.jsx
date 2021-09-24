@@ -1,7 +1,10 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { Link } from 'react-router-dom';
-import { RECEPIE_VIEWED } from '../../../redux/recepiesSlice/recepiesSlice';
+import { Link, useHistory } from 'react-router-dom';
+import {
+	RECEPIE_VIEWED,
+	RECEPIE_DELETED_REQUEST,
+} from '../../../redux/recepiesSlice/recepiesSlice';
 import { GET_RECEPIE_COMMENTS } from '../../../redux/commentsSlice/commentsSlice';
 import RecepieControls from '../recepieControls/RecepieControls';
 import IngredientsList from './ingredientsList/IngredientsList';
@@ -13,6 +16,7 @@ import {
 } from '../../../selectors/selectors';
 
 const RecepieFull = ({ match }) => {
+	const history = useHistory();
 	const dispatch = useDispatch();
 	const { recepieId } = match.params;
 	useEffect(() => {
@@ -21,13 +25,14 @@ const RecepieFull = ({ match }) => {
 	}, []);
 	const recipe = useSelector((state) => getRecepiesById(state, recepieId));
 	const userStatus = useSelector(getUserStatus);
-	const { logged } = userStatus;
+	const { logged, user } = userStatus;
 	const { comments } = useSelector(getComments);
 	if (!recipe) {
 		return <div>Not found...</div>;
 	}
 	const {
 		author,
+		authorId,
 		commentsCount,
 		title,
 		views,
@@ -38,10 +43,32 @@ const RecepieFull = ({ match }) => {
 		directions,
 		ingredients,
 	} = recipe;
+	const onDelete = () => {
+		dispatch(RECEPIE_DELETED_REQUEST(id));
+		history.push('/');
+	};
+
 	return (
 		<article className="recepie-full">
+			{logged ? (
+				user.id == authorId ? (
+					<button
+						type="button"
+						className="recepie-full_del-btn"
+						onClick={onDelete}
+					>
+						<i className="fas fa-times fa-2x" />
+					</button>
+				) : null
+			) : null}
 			<section className="recepie-full-info">
-				<img className="recepie-full-info-img" src={img || '/'} alt="Food" />
+				<img
+					className="recepie-full-info-img"
+					src={
+						img || 'http://localhost:3000/assets/images/recepie-placeholder.png'
+					}
+					alt="Food"
+				/>
 				<div className="recepie-full-info-text">
 					<div className="recepie-full-info-text-section">
 						<h2 className="recepie-full-info-text-section_main-title">

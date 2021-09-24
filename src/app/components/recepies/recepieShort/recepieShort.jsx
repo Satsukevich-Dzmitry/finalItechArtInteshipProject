@@ -11,7 +11,13 @@ const RecepieShort = ({ recipe }) => {
 	const { logged } = userStatus;
 	return (
 		<article className="recepie-short">
-			<img className="recepie-short_img" src={img} alt="CookBook" />
+			<img
+				className="recepie-short_img"
+				src={
+					img || 'http://localhost:3000/assets/images/recepie-placeholder.png'
+				}
+				alt="CookBook"
+			/>
 			<div className="recepie-short-info">
 				<div className="recepie-short-info_creds">
 					<Link to={`/search/recepies/${id}`}>

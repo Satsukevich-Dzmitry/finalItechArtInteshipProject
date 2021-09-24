@@ -34,9 +34,13 @@ export const recepiesSlice = createSlice({
 		RECEPIE_COMMENTED_SUCCESS: (state, action) => {
 			state.allRecepies.find(recepie => recepie.id === action.payload).commentsCount += 1;
 		},
+		RECEPIE_DELETED_REQUEST: () => { },
+		RECEPIE_DELETED_SUCCESS: (state, action) => {
+			state.allRecepies = state.allRecepies.filter(recepie => recepie.id !== action.payload);
+		}
 	}
 })
 
-export const { GET_RECEPIES_SUCCESS, GET_RECEPIES_REQUEST, POST_RECEPIE_REQUEST, RECEPIE_LIKED, RECEPIE_VIEWED, RECEPIE_VIEWED_SUCCESS, RECEPIE_LIKED_SUCCESS, RECEPIE_UNLIKED, RECEPIE_UNLIKED_SUCCESS, RECEPIE_COMMENTED_SUCCESS } = recepiesSlice.actions
+export const { GET_RECEPIES_SUCCESS, GET_RECEPIES_REQUEST, POST_RECEPIE_REQUEST, RECEPIE_LIKED, RECEPIE_VIEWED, RECEPIE_VIEWED_SUCCESS, RECEPIE_LIKED_SUCCESS, RECEPIE_UNLIKED, RECEPIE_UNLIKED_SUCCESS, RECEPIE_COMMENTED_SUCCESS, RECEPIE_DELETED_REQUEST, RECEPIE_DELETED_SUCCESS } = recepiesSlice.actions
 
 export default recepiesSlice.reducer

@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { Formik } from 'formik';
 import { USER_UPDATE_PROFILE } from '../../../../../redux/userSlice/userSlice';
 import { getUserStatus } from '../../../../../selectors/selectors';
-import imageToBase64 from '../../../../../utils/imageToBase64';
+import postImageToApi from '../../../../../services/imagesService/postImage';
 
 const ProfileAvatar = () => {
 	const { logged, user } = useSelector(getUserStatus);
@@ -16,9 +16,13 @@ const ProfileAvatar = () => {
 	const { avatar, userName, email, id } = user;
 
 	const onSubmit = async (values) => {
-		const image = await imageToBase64(values);
+		const avatarUrl = await postImageToApi(values);
 		dispatch(
-			USER_UPDATE_PROFILE({ id, propToUpdate: 'avatar', newPropValue: image })
+			USER_UPDATE_PROFILE({
+				id,
+				propToUpdate: 'avatar',
+				newPropValue: avatarUrl,
+			})
 		);
 	};
 

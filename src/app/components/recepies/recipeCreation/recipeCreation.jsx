@@ -5,15 +5,15 @@ import { nanoid } from '@reduxjs/toolkit';
 import { recipeCreationValidation } from '../../../validations/recipesValidation';
 import { POST_RECEPIE_REQUEST } from '../../../redux/recepiesSlice/recepiesSlice';
 import { getUserStatus } from '../../../selectors/selectors';
-import imageToBase64 from '../../../utils/imageToBase64';
+import postImageToApi from '../../../services/imagesService/postImage';
 
 const RecipeCreation = () => {
 	const userStatus = useSelector(getUserStatus);
 	const { logged, user } = userStatus;
 	const dispatch = useDispatch();
 	const onSubmit = async (values, { setSubmitting, resetForm }) => {
-		const imgBase64 = await imageToBase64(values);
-		const updatedValues = { ...values, img: imgBase64 };
+		const imgCDN = await postImageToApi(values);
+		const updatedValues = { ...values, img: imgCDN };
 		const { id, email, userName } = user;
 		const payload = {
 			...updatedValues,
