@@ -11,7 +11,9 @@ const testingInitialState = {
 		id: 14,
 		userName: 'Dzmitry',
 		email: "dima@mail.com",
-		likedRecipes: [],
+		likedRecipes: ["AVwR5BZoiA0PLcS42Y-kp",
+			"ruUk4b6k3-efaCsjG6Ih9",
+			"a4fsQYgm_RdI_bzbD6-8K"],
 		description: "My new profile Descrition"
 	}
 }

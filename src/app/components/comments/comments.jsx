@@ -14,7 +14,7 @@ const Comments = ({ comments, postId }) => {
 		<section className="comments-section">
 			<h2 className="comments-section_title">Comments</h2>
 			{logged ? <AddCommentForm postId={postId} /> : null}
-			{commentsToShow}
+			{commentsToShow.length ? commentsToShow : <p>No comments yet...</p>}
 		</section>
 	);
 };

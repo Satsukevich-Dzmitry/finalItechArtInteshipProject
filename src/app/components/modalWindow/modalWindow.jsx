@@ -1,26 +1,25 @@
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 
 const ModalWindow = (props) => {
 	const [showed, setShowed] = useState(true);
-	const modalWrapperRef = useRef(null);
-	useEffect(() => {
-		const onModalClick = (e) => {
-			if (e.target === modalWrapperRef.current) {
-				setShowed(false);
-			}
-		};
-		if (modalWrapperRef && modalWrapperRef.current) {
-			modalWrapperRef.current.addEventListener('click', onModalClick);
-		}
-		return () => {
-			modalWrapperRef.current.removeEventListener('click', onModalClick);
-		};
-	}, [modalWrapperRef]);
+	const history = useHistory();
+	const onClick = () => {
+		setShowed(false);
+		history.goBack();
+	};
 	if (!showed) {
 		return null;
 	}
 	return (
-		<div className="modal-window" ref={modalWrapperRef}>
+		<div className="modal-window">
+			<button
+				type="button"
+				className="modal-window_close-btn"
+				onClick={onClick}
+			>
+				<i className="fas fa-times fa-2x" />
+			</button>
 			{props.children}
 		</div>
 	);

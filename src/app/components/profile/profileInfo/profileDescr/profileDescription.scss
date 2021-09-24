@@ -1,16 +1,10 @@
+@import './profileAvatar/profileAvatar';
 .profile-description{
 	display: flex;
 	flex-direction: row;
 	align-items: flex-start;
 	justify-content: flex-start;
 	gap:30px;
-	&_img{
-		background-color: $white;
-		width: 160px;
-		height: 160px;
-		aspect-ratio: 1/1;
-		border-radius: 50%;
-	}
 	&_info{
 		display: flex;
 		flex-direction: column;

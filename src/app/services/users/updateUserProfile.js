@@ -10,9 +10,4 @@ export default async function updateUserProfile(id, propToUpdate, newPropValue) 
 		return true
 	}
 	return false;
-
-	// const payload = { email, password: newPassword };
-	// const response = await fetchUsers('login', payload);
-	// return response;
-	// console.log(id, propToUpdate, newPropValue);
 }

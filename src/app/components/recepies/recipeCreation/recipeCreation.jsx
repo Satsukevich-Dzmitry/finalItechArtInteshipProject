@@ -5,15 +5,18 @@ import { nanoid } from '@reduxjs/toolkit';
 import { recipeCreationValidation } from '../../../validations/recipesValidation';
 import { POST_RECEPIE_REQUEST } from '../../../redux/recepiesSlice/recepiesSlice';
 import { getUserStatus } from '../../../selectors/selectors';
+import imageToBase64 from '../../../utils/imageToBase64';
 
 const RecipeCreation = () => {
 	const userStatus = useSelector(getUserStatus);
 	const { logged, user } = userStatus;
 	const dispatch = useDispatch();
-	const onSubmit = (values, { setSubmitting, resetForm }) => {
+	const onSubmit = async (values, { setSubmitting, resetForm }) => {
+		const imgBase64 = await imageToBase64(values);
+		const updatedValues = { ...values, img: imgBase64 };
 		const { id, email, userName } = user;
 		const payload = {
-			...values,
+			...updatedValues,
 			authorId: id,
 			author: userName || email,
 			id: nanoid(),
@@ -37,10 +40,11 @@ const RecipeCreation = () => {
 					description: '',
 					ingredients: [],
 					directions: '',
+					img: '',
 				}}
 				onSubmit={onSubmit}
 				validationSchema={recipeCreationValidation}
-				render={({ values, resetForm, errors, touched }) => (
+				render={({ values, resetForm, errors, touched, setFieldValue }) => (
 					<Form className="recipe-creation-form">
 						<div className="recipe-creation-form-element">
 							<label
@@ -62,11 +66,13 @@ const RecipeCreation = () => {
 						</div>
 						<div className="recipe-creation-form_img-element">
 							<label htmlFor="recipe-creation-form_img">Recepie picture</label>
-							<Field
+							<input
 								id="recipe-creation-form_img"
 								name="img"
 								type="file"
-								placeholder="Image"
+								onChange={(e) => {
+									setFieldValue('img', e.target.files[0]);
+								}}
 							/>
 						</div>
 						<div className="recipe-creation-form-element">

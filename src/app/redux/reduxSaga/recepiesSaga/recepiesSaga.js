@@ -7,7 +7,7 @@ import addLikeToRecepie from '../../../services/recepies/addLikeToRecepie';
 import removeLikeFromRecepie from '../../../services/recepies/removeLikeFromRecepie';
 import recepieViewed from '../../../services/recepies/recepieViewed';
 import recepieCommented from '../../../services/recepies/recepieCommented';
-import resolveImgPath from '../../../utils/imagePath';
+
 
 function* recepieCommentedSaga({ payload }) {
 	const { postId } = payload;
@@ -28,8 +28,7 @@ function* likePostSaga({ payload }) {
 	yield put(RECEPIE_LIKED_SUCCESS(myPayload));
 }
 function* postNewRecepieSaga({ payload }) {
-	const newPayload = { ...payload, img: resolveImgPath(payload) };
-	const myPayload = yield call(postNewRecepie, newPayload);
+	const myPayload = yield call(postNewRecepie, payload);
 	yield put(GET_RECEPIES_REQUEST(myPayload));
 }
 

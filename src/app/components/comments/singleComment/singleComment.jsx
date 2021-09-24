@@ -1,13 +1,18 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import getUsername from '../../../services/users/getUserName';
+import getUsernameAndAvatar from '../../../services/users/getUserName';
 import getTimePassed from './utils/getTimePassed';
 
 const SingleComment = ({ comment }) => {
 	const { body, authorId, creationTime } = comment;
 	const [createdAt, setCreatedAt] = useState(null);
 	const [authorName, setAuthorName] = useState('');
+	const [commentAvatar, setCommentAvatar] = useState('');
 	const fetchUsername = useCallback(async () => {
-		setAuthorName(await getUsername(authorId));
+		const { name, avatar } = await getUsernameAndAvatar(authorId);
+		setAuthorName(name);
+		setCommentAvatar(
+			avatar || 'http://localhost:3000/assets/images/avatar-placeholder.gif'
+		);
 	}, [comment]);
 	useEffect(() => {
 		fetchUsername();
@@ -19,7 +24,7 @@ const SingleComment = ({ comment }) => {
 	return (
 		<div className="single-comment">
 			<div className="single-comment_profile-img-container">
-				<img src="/" alt="profile" />
+				<img src={commentAvatar} alt={authorName} />
 			</div>
 			<div className="single-comment-content">
 				<div className="single-comment-content-info">

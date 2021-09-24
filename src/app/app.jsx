@@ -14,6 +14,7 @@ import CookboockSearch from './components/search/cooksBookSearch/CookBookSearch'
 import RecepiesSearch from './components/search/recepiesSearch/RecepiesSearch';
 import RecepieFull from './components/recepies/recepieFull/RecepieFull';
 import RecipeCreation from './components/recepies/recipeCreation/RecipeCreation';
+import ModalWindow from './components/modalWindow/ModalWindow';
 
 const App = () => {
 	const dispatch = useDispatch();
@@ -42,7 +43,6 @@ const App = () => {
 					)}
 				/>
 				<Route
-					exact
 					path="/search/recepies"
 					render={() => (
 						<Search>
@@ -50,8 +50,15 @@ const App = () => {
 						</Search>
 					)}
 				/>
-				<Route path="/search/recepies/:recepieId" component={RecepieFull} />
 			</Switch>
+			<Route
+				path="/search/recepies/:recepieId"
+				render={(routeProps) => (
+					<ModalWindow>
+						<RecepieFull {...routeProps} />
+					</ModalWindow>
+				)}
+			/>
 			<Route path="/recipeCreating" component={RecipeCreation} />
 			<Footer />
 		</Router>
