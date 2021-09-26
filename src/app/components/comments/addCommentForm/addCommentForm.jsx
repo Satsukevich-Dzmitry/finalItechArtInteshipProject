@@ -35,6 +35,7 @@ const AddCommentForm = ({ postId, cookBook }) => {
 						  })
 				);
 				actions.setSubmitting(false);
+				actions.resetForm();
 			}}
 		>
 			{(props) => (

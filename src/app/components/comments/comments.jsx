@@ -12,7 +12,10 @@ const Comments = ({ comments, postId, cookBook }) => {
 		<SingleComment key={comment.id} comment={comment} />
 	));
 	return (
-		<section className="comments-section">
+		<section
+			className="comments-section"
+			style={cookBook ? { padding: '0' } : ''}
+		>
 			<h2 className="comments-section_title">Comments</h2>
 			{logged ? <AddCommentForm postId={postId} cookBook={cookBook} /> : null}
 			{commentsToShow.length ? commentsToShow : <p>No comments yet...</p>}

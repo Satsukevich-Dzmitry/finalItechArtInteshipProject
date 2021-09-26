@@ -35,6 +35,12 @@ export const userSlice = createSlice({
 		USER_UNLIKED_RECIPE: (state, action) => {
 			state.user.likedRecipes = action.payload;
 		},
+		USER_LIKED_BOOK: (state, action) => {
+			state.user.likedCookBooks = action.payload;
+		},
+		USER_UNLIKED_BOOK: (state, action) => {
+			state.user.likedCookBooks = action.payload;
+		},
 		USER_UPDATE_PROFILE: () => { },
 		USER_UPDATE_PROFILE_SUCCESS: (state, action) => {
 			state.user[action.payload.propToUpdate] = action.payload.newPropValue;
@@ -42,6 +48,6 @@ export const userSlice = createSlice({
 	}
 })
 
-export const { USER_LOGGED, USER_LOGGING, USER_PASSWORD_CHANGING, USER_PASSWORD_RESTORING, USER_LIKED_RECIPE, USER_UNLIKED_RECIPE, USER_UPDATE_PROFILE, USER_UPDATE_PROFILE_SUCCESS } = userSlice.actions
+export const { USER_LOGGED, USER_LOGGING, USER_PASSWORD_CHANGING, USER_PASSWORD_RESTORING, USER_LIKED_RECIPE, USER_UNLIKED_RECIPE, USER_UPDATE_PROFILE, USER_UPDATE_PROFILE_SUCCESS, USER_LIKED_BOOK, USER_UNLIKED_BOOK } = userSlice.actions
 
 export default userSlice.reducer

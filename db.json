@@ -13,8 +13,8 @@
       "author": "Dzmitry",
       "id": "NzyJ-Jm4d_BOmJvOkJxtS",
       "likes": 0,
-      "commentsCount": 0,
-      "views": 18
+      "commentsCount": 2,
+      "views": 19
     },
     {
       "title": "First cookbook",
@@ -26,9 +26,9 @@
       "authorId": 19,
       "author": "Nikita",
       "id": "p7rBeeJovVugfQLY59s6J",
-      "likes": 0,
-      "commentsCount": 0,
-      "views": 2
+      "likes": 5,
+      "commentsCount": 5,
+      "views": 27
     }
   ],
   "recepies": [
@@ -291,6 +291,34 @@
       "authorId": 19,
       "creationTime": 1632659420611,
       "id": "gznUROMCTJxQy4yPl3D8W"
+    },
+    {
+      "body": "Comment",
+      "postId": "p7rBeeJovVugfQLY59s6J",
+      "authorId": 14,
+      "creationTime": 1632669696531,
+      "id": "n6VheN-YJg5UrNoM0JO2_"
+    },
+    {
+      "body": "new comment",
+      "postId": "p7rBeeJovVugfQLY59s6J",
+      "authorId": 14,
+      "creationTime": 1632669849077,
+      "id": "eRY_yCD7w5TY_0CnirzxN"
+    },
+    {
+      "body": "new comment",
+      "postId": "p7rBeeJovVugfQLY59s6J",
+      "authorId": 14,
+      "creationTime": 1632670284752,
+      "id": "Bz76AoyoewHc4v4P3wj71"
+    },
+    {
+      "body": "And another",
+      "postId": "p7rBeeJovVugfQLY59s6J",
+      "authorId": 14,
+      "creationTime": 1632670359968,
+      "id": "C06PN6wEk_YyuPYTPnAsU"
     }
   ],
   "recepiesComments": [
@@ -437,74 +465,6 @@
   ],
   "users": [
     {
-      "email": "test2@mail.com",
-      "password": "$2a$10$aMG0FQcwYuyZ4eQf4ulUi.L4NcXeLiBdfJBdEUozCwo86aQXazngu",
-      "confirmPassword": "1234567890",
-      "id": 1
-    },
-    {
-      "email": "hello@mail.com",
-      "password": "$2a$10$18/mHGLG6D4Mr1F0l62In.32b1igd3raclA/dLmhY/ak5Xxv1HS0u",
-      "confirmPassword": "12345678",
-      "id": 2
-    },
-    {
-      "email": "top@mail.com",
-      "password": "$2a$10$gfA85si0bke2lDAfcTzRoe7Z3rOLwzfaKff6gjm/V/OVBirCzITNq",
-      "confirmPassword": "12345678",
-      "id": 3
-    },
-    {
-      "email": "wrt@mail.com",
-      "password": "$2a$10$0gOFoGDHUjnne3zmVABYcOb8.pvFlqjsb.066LAmTQxJ30Skp3Vji",
-      "id": 4
-    },
-    {
-      "email": "PostmanTest@mail.com",
-      "password": "$2a$10$zWikaKPYhn6rNhnR66KIbON.G33y9TvTCLyzFLNWRg8Uuu7R8Y80S",
-      "id": 5
-    },
-    {
-      "email": "inputTest@mail.com",
-      "password": "$2a$10$ZEbetLPbcchnckpxM/pvzeItFEc/4WFNnsLiW/Uv/ctcAFCc5kLK.",
-      "id": 6
-    },
-    {
-      "email": "fix@mail.com",
-      "password": "$2a$10$xiPNXXtMKNMTxymG2siUjOJ/rHNXfQK4litb1uxgwE5WQnU216ma.",
-      "id": 7
-    },
-    {
-      "email": "dsadaw@cacaca.com",
-      "password": "$2a$10$6dUMnyydRAZoj880UvvsPeuteGHK2ZtQyKhfzxqCaFTGSgZKiDyPi",
-      "id": 8
-    },
-    {
-      "email": "dimamoving@yandex.by",
-      "password": "$2a$10$dO5cvMAhyJRBP1jIaxKG8unxo4xV1sqpkUxEnkmry7E6j6qW6P7cC",
-      "id": 9
-    },
-    {
-      "email": "123@mail.com",
-      "password": "$2a$10$aLO9LbQXdkVuUFh21w.jK.M0YpcW2LBG0cPJl0xgso5OGAk.OvmU.",
-      "id": 10
-    },
-    {
-      "email": "dzmitry@mail.com",
-      "password": "$2a$10$DCeC.FC/2SLSPFsdfEf0I.tqFNGBLdVkdAf.sBGjuGealMl5gwMuK",
-      "id": 11
-    },
-    {
-      "email": "1234@mail.com",
-      "password": "$2a$10$/dQs.FCw6Bc7qM1DU48LH.FWLmbC20b6MGjGWN13rXA0TvFqlGD8S",
-      "id": 12
-    },
-    {
-      "email": "b@mail.com",
-      "password": "$2a$10$IFC3.e4orKnJZiSfR9yWAeZUff8Zldmp6Si4quAto/JOcyabtQiva",
-      "id": 13
-    },
-    {
       "email": "dima@mail.com",
       "password": "$2a$10$ZCbOZhkP3KfVHPNOZ6sTsuywpLGKGepYTTWh.GXc2ogCzhtT5yTEm",
       "id": 14,
@@ -515,6 +475,7 @@
         "a4fsQYgm_RdI_bzbD6-8K",
         "KuzeOGNYc1u2RINuh0eJa"
       ],
+      "likedCookBooks": [],
       "description": "My new profile Descrition",
       "avatar": "https://cdn.image4.io/itechartfinal/men-vector.jpg"
     },
@@ -522,12 +483,14 @@
       "email": "Dzmitry2@mail.com",
       "password": "$2a$10$BP.TJwFwJ6TcbTGtlVRsqu/FJrKhNWTRok79NKEmGc0UDneqg1dhS",
       "id": 15,
-      "likedRecipes": []
+      "likedRecipes": [],
+      "likedCookBooks": []
     },
     {
       "email": "dzmitry3@mail.com",
       "password": "$2a$10$DPxA0pBcKtaszspE9Gz1je3oqDjT7019/pZiBCZqaGgNTT3X9iLAm",
       "likedRecipes": [],
+      "likedCookBooks": [],
       "id": 16
     },
     {
@@ -537,6 +500,7 @@
         "nfDL01yQvEu33t8-xPxUm",
         "2"
       ],
+      "likedCookBooks": [],
       "id": 17
     },
     {
@@ -547,6 +511,7 @@
         "6QGb2XC0BNf_BoN29YWsC",
         "-XKvwH4UXvWFd8UR5Ww8e"
       ],
+      "likedCookBooks": [],
       "id": 18,
       "userName": "AnotherDzmitry",
       "description": "Some description"
@@ -557,6 +522,7 @@
       "likedRecipes": [
         "a4fsQYgm_RdI_bzbD6-8K"
       ],
+      "likedCookBooks": [],
       "id": 19,
       "userName": "Nikita",
       "description": "Hi",
