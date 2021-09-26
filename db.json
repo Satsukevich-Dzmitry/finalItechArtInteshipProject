@@ -1,40 +1,34 @@
 {
   "cookbooks": [
     {
-      "id": "1",
-      "title": "Fresh meat",
-      "author": "John Doe",
-      "views": 12000,
-      "likes": 499,
-      "comments": 12,
-      "img": "mostPopularCookbook.png"
+      "title": "new cookBook",
+      "description": "some text",
+      "recipes": [
+        "-XKvwH4UXvWFd8UR5Ww8e",
+        "G6A0wq7Pu3E77W2fGSwSu",
+        "ruUk4b6k3-efaCsjG6Ih9"
+      ],
+      "img": "yes",
+      "authorId": 14,
+      "author": "Dzmitry",
+      "id": "NzyJ-Jm4d_BOmJvOkJxtS",
+      "likes": 0,
+      "commentsCount": 0,
+      "views": 18
     },
     {
-      "id": "2",
-      "title": "Fresh meat",
-      "author": "John Doe",
-      "views": 12001,
-      "likes": 499,
-      "comments": 12,
-      "img": "mostPopularCookbook.png"
-    },
-    {
-      "id": "3",
-      "title": "Fresh meat",
-      "author": "John Doe",
-      "views": 12002,
-      "likes": 499,
-      "comments": 12,
-      "img": "mostPopularCookbook.png"
-    },
-    {
-      "id": "4",
-      "title": "Fresh meat",
-      "author": "John Doe",
-      "views": 12003,
-      "likes": 499,
-      "comments": 12,
-      "img": "mostPopularCookbook.png"
+      "title": "First cookbook",
+      "description": "Some description",
+      "recipes": [
+        "EXx-w46lp0HFNh9Nf14in"
+      ],
+      "img": "https://cdn.image4.io/itechartfinal/photo.jfif",
+      "authorId": 19,
+      "author": "Nikita",
+      "id": "p7rBeeJovVugfQLY59s6J",
+      "likes": 0,
+      "commentsCount": 0,
+      "views": 2
     }
   ],
   "recepies": [
@@ -215,7 +209,7 @@
       "id": "yw6WMSAvtonKdjWDYFp72",
       "likes": 1,
       "commentsCount": 0,
-      "views": 0
+      "views": 1
     },
     {
       "title": "img test",
@@ -245,7 +239,7 @@
       "id": "ruUk4b6k3-efaCsjG6Ih9",
       "likes": 1,
       "commentsCount": 0,
-      "views": 0
+      "views": 1
     },
     {
       "title": "And another test for images",
@@ -259,23 +253,23 @@
       "author": "Dzmitry",
       "id": "fp8vnzgBIVWsBgwivTL_M",
       "likes": 0,
-      "commentsCount": 0,
-      "views": 2
+      "commentsCount": 2,
+      "views": 5
     },
     {
-      "title": "fdsfdsfds",
-      "description": "fdsfsdfsd",
+      "title": "My recipe",
+      "description": "some text",
       "ingredients": [
-        "fdsfs"
+        "etwtetwt"
       ],
-      "directions": "fsdfsdfs",
-      "img": "http://localhost:3000/assets/images/avatar-placeholder.gif",
-      "authorId": 14,
-      "author": "Dzmitry",
-      "id": "HvF0HBPO9OeD3vAR2B9Ag",
-      "likes": 1,
+      "directions": "vddvzdvzv",
+      "img": "https://cdn.image4.io/itechartfinal/food.jpg",
+      "authorId": 19,
+      "author": "Nikita",
+      "id": "EXx-w46lp0HFNh9Nf14in",
+      "likes": 0,
       "commentsCount": 0,
-      "views": 2
+      "views": 0
     }
   ],
   "cookBookComments": [
@@ -283,6 +277,20 @@
       "id": "1",
       "body": "some comment",
       "postId": "1"
+    },
+    {
+      "body": "hello",
+      "postId": "NzyJ-Jm4d_BOmJvOkJxtS",
+      "authorId": 19,
+      "creationTime": 1632659280915,
+      "id": "4dC_13x1pzSPuErjyyruE"
+    },
+    {
+      "body": "And comment",
+      "postId": "p7rBeeJovVugfQLY59s6J",
+      "authorId": 19,
+      "creationTime": 1632659420611,
+      "id": "gznUROMCTJxQy4yPl3D8W"
     }
   ],
   "recepiesComments": [
@@ -411,6 +419,20 @@
       "authorId": 19,
       "creationTime": 1632503318775,
       "id": "DcaH4bELo2p70USgKjC_r"
+    },
+    {
+      "body": "Hello",
+      "postId": "fp8vnzgBIVWsBgwivTL_M",
+      "authorId": 19,
+      "creationTime": 1632659029651,
+      "id": "EmftGl_7i0tHTfR1NqCBy"
+    },
+    {
+      "body": "bye",
+      "postId": "fp8vnzgBIVWsBgwivTL_M",
+      "authorId": 19,
+      "creationTime": 1632659289371,
+      "id": "W548hfIrPnwr_s0eP-nDx"
     }
   ],
   "users": [

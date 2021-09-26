@@ -1,5 +1,5 @@
-const postNewRecepie = async (payload) => {
-	const response = await fetch(`http://localhost:3000/recepies`, {
+const postNewBook = async (payload) => {
+	const response = await fetch(`http://localhost:3000/cookbooks`, {
 		method: 'POST',
 		headers: {
 			'content-type': 'application/json',
@@ -14,4 +14,4 @@ const postNewRecepie = async (payload) => {
 
 };
 
-export default postNewRecepie;
+export default postNewBook;

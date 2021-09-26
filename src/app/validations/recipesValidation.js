@@ -6,4 +6,5 @@ const recipeCreationValidation = Yup.object({
 });
 
 
-export { recipeCreationValidation };
+
+export default recipeCreationValidation;

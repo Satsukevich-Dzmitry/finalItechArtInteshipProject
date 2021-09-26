@@ -33,6 +33,9 @@
 		&_item{
 			border-radius: 8px;
 			padding: 13px;
+			&>a{
+				color: inherit;
+			}
 			&:hover{
 				background-color: $lightYellow;
 				cursor: default;

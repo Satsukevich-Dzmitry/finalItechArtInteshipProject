@@ -1,10 +1,13 @@
 import React from 'react';
 import { Formik } from 'formik';
 import { useDispatch, useSelector } from 'react-redux';
-import { ADD_RECEPIE_COMMENT } from '../../../redux/commentsSlice/commentsSlice';
+import {
+	ADD_RECEPIE_COMMENT,
+	ADD_BOOK_COMMENT,
+} from '../../../redux/commentsSlice/commentsSlice';
 import { getUserStatus } from '../../../selectors/selectors';
 
-const AddCommentForm = ({ postId }) => {
+const AddCommentForm = ({ postId, cookBook }) => {
 	const userStatus = useSelector(getUserStatus);
 	const { logged, user } = userStatus;
 	const dispatch = useDispatch();
@@ -17,12 +20,19 @@ const AddCommentForm = ({ postId }) => {
 			initialValues={{ commentBody: '' }}
 			onSubmit={(values, actions) => {
 				dispatch(
-					ADD_RECEPIE_COMMENT({
-						body: values.commentBody,
-						postId,
-						authorId: id,
-						creationTime: Date.now(),
-					})
+					cookBook
+						? ADD_BOOK_COMMENT({
+								body: values.commentBody,
+								postId,
+								authorId: id,
+								creationTime: Date.now(),
+						  })
+						: ADD_RECEPIE_COMMENT({
+								body: values.commentBody,
+								postId,
+								authorId: id,
+								creationTime: Date.now(),
+						  })
 				);
 				actions.setSubmitting(false);
 			}}

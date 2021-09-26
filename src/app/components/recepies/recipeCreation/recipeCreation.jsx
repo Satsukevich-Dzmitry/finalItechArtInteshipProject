@@ -2,7 +2,7 @@ import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Formik, Form, Field, FieldArray } from 'formik';
 import { nanoid } from '@reduxjs/toolkit';
-import { recipeCreationValidation } from '../../../validations/recipesValidation';
+import recipeCreationValidation from '../../../validations/recipesValidation';
 import { POST_RECEPIE_REQUEST } from '../../../redux/recepiesSlice/recepiesSlice';
 import { getUserStatus } from '../../../selectors/selectors';
 import postImageToApi from '../../../services/imagesService/postImage';

@@ -21,10 +21,19 @@ export const booksSlice = createSlice({
 		},
 		GET_BOOKS_REQUEST: (state) => {
 			state
-		}
+		},
+		POST_BOOK_REQUEST: () => { },
+		POST_BOOK_SUCCESS: (state, action) => {
+			state.allBooks.push(action.payload)
+		},
+		BOOK_VIEWED: () => {
+		},
+		BOOK_VIEWED_SUCCESS: (state, action) => {
+			state.allBooks.find(book => book.id === action.payload).views += 1;
+		},
 	}
 })
 
-export const { GET_BOOKS_SUCCESS, GET_BOOKS_REQUEST } = booksSlice.actions
+export const { GET_BOOKS_SUCCESS, GET_BOOKS_REQUEST, POST_BOOK_REQUEST, POST_BOOK_SUCCESS, BOOK_VIEWED, BOOK_VIEWED_SUCCESS } = booksSlice.actions
 
 export default booksSlice.reducer

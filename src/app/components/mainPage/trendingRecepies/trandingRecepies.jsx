@@ -1,12 +1,12 @@
 import React from 'react';
-import CookBook from '../cookBook/CookBook';
+import CookBookShort from '../../cookBook/cookBookShort/CookBookShort';
 
 export default function TrandingRecepies(props) {
 	return (
 		<div className="tranding-recepies">
-			<CookBook />
-			<CookBook />
-			<CookBook />
+			<CookBookShort />
+			<CookBookShort />
+			<CookBookShort />
 		</div>
 	);
 }
