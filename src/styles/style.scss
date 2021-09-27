@@ -3,7 +3,7 @@
 @import 'vars/vars';
 @import 'vars/mixins';
 @import 'common/commonStyles';
-@import '../app/components/mainPage/cookBook/cookBook';
+@import '../app/components/cookBook/cookBook';
 @import '../app/components/headerAndFooter/header/header';
 @import '../app/components/headerAndFooter/footer/footer';
 @import '../app/components/mainPage/mainSection/mainSection';
@@ -14,19 +14,19 @@
 @import '../app/components/search/recepiesSearch/recepiesSearch';
 @import '../app/components/search/cooksBookSearch/cookBookSearch';
 @import '../app/components/search/searchSection';
-@import '../app/components/auth/loginSection/logIn.scss';
-@import '../app/components/auth/signUpSection/signUp.scss';
+@import '../app/components/auth/loginSection/logIn';
+@import '../app/components/auth/signUpSection/signUp';
 @import '../app/components/auth/authForm/authForm';
-@import '../app/components/auth/authSectionMessage/authSectionMessage.scss';
+@import '../app/components/auth/authSectionMessage/authSectionMessage';
+@import '../app/components/profile/profilePage';
+@import '../app/components/recepies/recipes';
+@import '../app/components/comments/comments';
+@import '../app/components/modalWindow/modalWindow';
 
-
-body {
+#root {
+	width: 100%;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	background-color: $backgroundColor;
-}
-
-#root {
-	width: 100%;
 }

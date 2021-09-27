@@ -1,0 +1,193 @@
+.cookbook-creation{
+	width: 1110px;
+	padding:0 95px;
+	display: flex;
+	min-height: 50vh;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 60px;
+	padding: 95px;
+	&_header{
+		@include NunitoFont(48px, $black);
+	}
+	&-form{
+		display: flex;
+		flex-direction: column;
+		width:100%;
+		gap:60px;
+		&_select{
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			gap:0;
+			background-color: $white;
+			box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+			border-radius: 10px;
+			padding: 12px;
+			box-sizing: border-box;
+		}
+		&_option{
+			width:100%;
+			height: 25px;
+			box-sizing: border-box;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			justify-content: center;
+			&>label{
+				@include NunitoFont(16px, $black);
+				&:hover{
+					cursor:pointer
+				}
+			}
+			&>input{
+				display:none;
+			}
+		}
+		&_selected-options{
+			display:flex;
+			flex-direction: column;
+			gap: 15px;
+		}
+		&_selected-item{
+			width:100%;
+			display: grid;
+			grid-template-columns: 1fr 170px;
+			&__btn{
+				border:none;
+				background-color: transparent;
+				@include NunitoFont(18px, $darkGrey);
+				&:hover{
+					cursor: pointer;
+				}
+			}
+		}
+		&_img-element{
+			width: 100%;
+			height: 100px;
+			&>label{
+				@include NunitoFont(24px, $black);
+				position:relative;
+				&::after{
+					content: "+ Upload";
+					width: 115px;
+					height:40px;
+					position:absolute;
+					bottom: calc(-100% - 5px);
+					background-color: $yellow;
+					border-radius: 8px;
+					display:flex;
+					align-items: center;
+					justify-content: space-around;
+					@include NunitoFont(16px, $black);
+					cursor:pointer;
+				}
+			}
+			&>input[type="file"]{
+				display: none;
+			}
+			&__del-btn{
+				border:none;
+				background-color: transparent;
+				@include NunitoFont(16px, $darkGrey);
+				margin-left: 15px;
+				&:hover{
+					text-decoration: line-through;
+					text-decoration-color: $errorColor;
+					cursor: pointer;
+				}
+			}
+		}
+		&-ingredients-list{
+			display: flex;
+			flex-direction: column;
+			gap: 20px;
+			width: 50%;
+			&_item{
+				padding-top: 22px;
+				display: flex;
+				flex-direction: row;
+				width:100%;
+				justify-content: space-between;
+				align-items: center;
+				&>p{
+					@include NunitoFont(16px, $black);
+				}
+				&>button{
+					border: none;
+					background-color: transparent;
+				}
+			}
+			&>button{
+				border: none;
+				background-color: $yellow;
+				padding: 0 25px;
+				box-sizing: border-box;
+				text-align: center;
+				width: 200px;
+				height:45px;
+				border-radius: 8px;
+				cursor: pointer;
+				@include NunitoFont(16px, $black);
+			}
+		}
+		&-element{
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			width:100%;
+			gap:5px;
+			&_label{
+				@include NunitoFont(24px, $black);
+			}
+			&_input{
+				@include NunitoFont(24px, $black);
+				background-color: $white;
+				box-sizing: border-box;
+				border: 1px solid #E1E1E1;
+				border-radius: 10px;
+				width: 100%;
+				height: 45px;
+				padding: 12px;
+				&:focus{
+					border-color: darken(#E1E1E1, 15%);
+				}
+			}
+			&_textarea{
+				@include NunitoFont(24px, $black);
+				background-color: $white;
+				border: 1px solid #E1E1E1;
+				box-sizing: border-box;
+				border-radius: 10px;
+				padding: 12px;
+				resize: none;
+				width:100%;
+				min-height:150px;
+			}
+		}
+		&_btns{
+			display: flex;
+			flex-direction: row;
+			align-self: flex-end;
+			&-reset{
+				@include NunitoFont(20px, ligten($black,10%));
+				border: none;
+				background-color: transparent;
+				padding: 15px;
+				cursor: pointer;
+			}
+			&-submit{
+				@include NunitoFont(20px,$black);
+				border: none;
+				background-color: $yellow;
+				padding: 15px;
+				cursor: pointer;
+				border-radius: 8px;
+			}
+		}
+		&_error{
+			@include NunitoFont(24px, $errorColor);
+		}
+	}
+}

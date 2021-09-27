@@ -1,0 +1,21 @@
+.recipe-like-button{
+	@include RobotoFont(15px, $darkText);
+	border: none;
+	background-color: transparent;
+	position:relative;
+	&:hover{
+		cursor: pointer;
+		color: $errorColor;
+	}
+	&__alert{
+		&:after{
+			content: 'Log in to like';
+			width: max-content;
+			position:absolute;
+			top:0%;
+			left:0%;
+			transform: translate(0%, -70%);
+			@include RobotoFont(12px, $errorColor);
+		}
+	}
+}

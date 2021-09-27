@@ -1,0 +1,14 @@
+@import './recipeLikeBtn/recipeLikeBtn';
+
+.recepie-controls {
+	width: 260px;
+	display:flex;
+	flex-direction: row;
+	align-items: baseline;
+	justify-content: space-between;
+	&_item{
+		display: block;
+		@include RobotoFont(12px, $darkText);
+		padding: 0;
+	}
+}

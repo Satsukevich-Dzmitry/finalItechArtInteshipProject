@@ -1,0 +1,27 @@
+.profile-avatar{
+	position: relative;
+	&_img{
+		background-color: $white;
+		width: 160px;
+		height: 160px;
+		aspect-ratio: 1/1;
+		border-radius: 50%;
+	}
+	&_hover{
+		display: flex;
+		position: absolute;
+		width:100%;
+		height:100%;
+		border-radius: 50%;
+		top:0;
+		opacity: 0;
+		color:$white;
+		align-items: center;
+		justify-content: center;
+		backdrop-filter: blur(10px) grayscale(30%);
+		transition: opacity 0.3s ease-in-out;
+	}
+	&:hover &_hover{
+		opacity: 1;
+	}
+}

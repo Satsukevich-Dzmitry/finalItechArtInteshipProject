@@ -1,0 +1,43 @@
+.single-comment{
+	width:100%;
+	display: flex;
+	gap: 20px;
+	&_profile-img-container{
+		display: block;
+		width: 76px;
+		height: 76px;
+		border-radius: 10px;
+		overflow: hidden;
+		flex-shrink: 0;
+		&> img{
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			border-radius: 50%;
+		}
+	}
+	&-content{
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 8px;
+		width:100%;
+		&-info{
+			display: flex;
+			justify-content: space-between;
+			gap:15px;
+			width:100%;
+			align-items: center;
+			&_author{
+				@include NunitoFont(20px, $yellow, 600);
+			}
+			&_time{
+				display: block;
+				@include NunitoFont(12px, $darkText);
+			}
+		}
+		&-text{
+			@include NunitoFont(16px, $commentColor);
+		}
+	}
+}

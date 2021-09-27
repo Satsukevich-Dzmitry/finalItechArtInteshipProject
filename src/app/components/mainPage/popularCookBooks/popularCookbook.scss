@@ -1,6 +1,22 @@
 .most-popular-cookbooks{
 	width: 1100px;
-	display:grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr;
-	gap: 30px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 60px;
+	&_books{
+		width:100%;
+		display:grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		gap: 30px;
+	}
+	&_btn{
+		width: 170px;
+		height: 60px;
+		text-align: center;
+		border: 2px solid $yellow;
+		background-color: transparent;
+		border-radius: 10px;
+		@include NunitoFont(20px, $yellow, bold);
+	}
 }

@@ -1,0 +1,27 @@
+@import './profileSettings/profileSettings';
+.profile-menu{
+	width: 1110px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	&-btns{
+		display: flex;
+		gap:40px;
+		&_item{
+			background-color: transparent;
+			border: none;
+			@include NunitoFont(24px, $lightGrey);
+			&:hover{
+				cursor: pointer;
+				text-decoration: underline;
+				text-decoration-color: lighten($yellow, 25%);
+				color: lighten($black, 25%);
+			}
+			&__active{
+				text-decoration: underline;
+				text-decoration-color: $yellow;
+				color: $black;
+			}
+		}
+	}
+}

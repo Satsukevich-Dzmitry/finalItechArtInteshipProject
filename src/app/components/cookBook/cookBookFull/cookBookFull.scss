@@ -1,0 +1,76 @@
+.cookbook-full{
+	width:1016px;
+	background-color: $white;
+	padding: 72px 56px;
+	display: flex;
+	flex-direction: column;
+	gap:40px;
+	box-shadow: 0px 18px 60px rgba(24, 24, 24, 0.7);
+	border-radius: 10px;
+	align-items: flex-start;
+	&-header{
+		width:100%;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		&_creds{
+			display: flex;
+			flex-direction: column;
+			gap:16px;
+			align-items: flex-start;
+			&>h2{
+				@include MontserratFont(40px, $titleBlack, bold);
+			}
+			&>p{
+				@include NunitoFont(18px, $yellow, 600);
+			}
+		}
+		&_save-btn{
+			display: flex;
+			justify-content: flex-end;
+			align-items: center;
+			&>button{
+				background-color: $yellow;
+				border-radius: 10px;
+				padding: 12px 32px;
+				text-align: center;
+				border: none;
+				@include NunitoFont(20px, $titleBlack, bold);
+			}
+		}
+	}
+	&-body{
+		width:100%;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 40px;
+		&_image{
+			width:100%;
+			height: 250px;
+			border-radius: 10px 50px;
+			object-fit: cover;
+		}
+		&_description{
+			width:100%;
+			display: flex;
+			flex-direction: column;
+			gap: 16px;
+			align-items: flex-start;
+			&>h3{
+				@include MontserratFont(20px, $titleBlack, bold);
+			}
+			&>p{
+				@include NunitoFont(14px, $titleBlack);
+			}
+		}
+	}
+	&-recipes{
+		width:100%;
+		display:flex;
+		flex-direction: column;
+		gap: 24px;
+		&_title{
+			align-self: flex-start;
+			@include MontserratFont(20px, $titleBlack, bold);
+		}
+	}
+}

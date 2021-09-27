@@ -1,24 +1,53 @@
 import { createSlice } from '@reduxjs/toolkit'
 
+const normalInitialState = {
+	logged: false,
+	user: null,
+	authToken: null,
+}
+const testingInitialState = {
+	logged: true,
+	user: {
+		id: 14,
+		userName: 'Dzmitry',
+		email: "dima@mail.com",
+		likedRecipes: ["AVwR5BZoiA0PLcS42Y-kp",
+			"ruUk4b6k3-efaCsjG6Ih9",
+			"a4fsQYgm_RdI_bzbD6-8K"],
+		description: "My new profile Descrition"
+	}
+}
 export const userSlice = createSlice({
 	name: 'USER',
-	initialState: {
-		logged: false,
-		user: null,
-		authToken: null,
-	},
+	initialState: normalInitialState,
 	reducers: {
 		USER_LOGGED: (state, action) => {
 			state.logged = true;
 			state.user = action.payload.user;
 			state.authToken = action.payload.accessToken;
 		},
-		USER_LOGGING: (state) => { state },
-		USER_PASSWORD_CHANGING: (state) => { state },
-		USER_PASSWORD_RESTORING: (state) => { state },
+		USER_LOGGING: () => { },
+		USER_PASSWORD_CHANGING: () => { },
+		USER_PASSWORD_RESTORING: () => { },
+		USER_LIKED_RECIPE: (state, action) => {
+			state.user.likedRecipes = action.payload;
+		},
+		USER_UNLIKED_RECIPE: (state, action) => {
+			state.user.likedRecipes = action.payload;
+		},
+		USER_LIKED_BOOK: (state, action) => {
+			state.user.likedCookBooks = action.payload;
+		},
+		USER_UNLIKED_BOOK: (state, action) => {
+			state.user.likedCookBooks = action.payload;
+		},
+		USER_UPDATE_PROFILE: () => { },
+		USER_UPDATE_PROFILE_SUCCESS: (state, action) => {
+			state.user[action.payload.propToUpdate] = action.payload.newPropValue;
+		},
 	}
 })
 
-export const { USER_LOGGED, USER_LOGGING, USER_PASSWORD_CHANGING, USER_PASSWORD_RESTORING } = userSlice.actions
+export const { USER_LOGGED, USER_LOGGING, USER_PASSWORD_CHANGING, USER_PASSWORD_RESTORING, USER_LIKED_RECIPE, USER_UNLIKED_RECIPE, USER_UPDATE_PROFILE, USER_UPDATE_PROFILE_SUCCESS, USER_LIKED_BOOK, USER_UNLIKED_BOOK } = userSlice.actions
 
 export default userSlice.reducer

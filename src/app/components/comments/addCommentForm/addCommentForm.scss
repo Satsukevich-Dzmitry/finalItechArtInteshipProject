@@ -1,0 +1,29 @@
+.add-comment-form{
+	width:100%;
+	display: flex;
+	justify-content: space-between;
+	&_input{
+		width: 800px;
+		height: 40px;
+		box-sizing: border-box;
+		border: 1px solid $inutBorder;
+		border-radius: 10px;
+	}
+	&_btn{
+		width:80px;
+		height: 40px;
+		background-color: $yellow;
+		border-radius: 10px;
+		border:none;
+		color:$white;
+		&:disabled{
+			background-color: darken($yellow, 5%);
+			&:hover{
+				cursor: default;
+			}
+		}
+		&:hover{
+			cursor: pointer;
+		}
+	}
+}
