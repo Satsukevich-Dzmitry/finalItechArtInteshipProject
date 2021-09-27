@@ -15,7 +15,7 @@ import RecepiesSearch from './components/search/recepiesSearch/RecepiesSearch';
 import RecepieFull from './components/recepies/recepieFull/RecepieFull';
 import RecipeCreation from './components/recepies/recipeCreation/RecipeCreation';
 import ModalWindow from './components/modalWindow/ModalWindow';
-import cookBookCreation from './components/cookBook/cookBookCreation/cookBookCreation';
+import cookBookCreation from './components/cookBook/cookBookCreation/CookBookCreation';
 import CookBookFull from './components/cookBook/cookBookFull/CookBookFull';
 
 const App = () => {

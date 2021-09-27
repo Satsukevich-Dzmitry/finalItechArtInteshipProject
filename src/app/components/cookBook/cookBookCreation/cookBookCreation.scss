@@ -87,6 +87,17 @@
 			&>input[type="file"]{
 				display: none;
 			}
+			&__del-btn{
+				border:none;
+				background-color: transparent;
+				@include NunitoFont(16px, $darkGrey);
+				margin-left: 15px;
+				&:hover{
+					text-decoration: line-through;
+					text-decoration-color: $errorColor;
+					cursor: pointer;
+				}
+			}
 		}
 		&-ingredients-list{
 			display: flex;

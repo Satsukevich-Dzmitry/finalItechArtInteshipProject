@@ -1,4 +1,7 @@
 export default async function postImageToApi({ img }) {
+	if (Object.keys(empty).length === 0 && empty.constructor === Object) {
+		return null;
+	}
 	const body = new FormData();
 	body.append('useFileName', true);
 	body.append('overwrite', true);
