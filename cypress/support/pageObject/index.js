@@ -27,7 +27,7 @@ export class UserNameCheck {
         return this
     }
     validateNicknameOnHeader() {
-        cy.get('a[href="/profilePage"]').should('not.contain', UserNameCheck.XSSPAYLOAD)
+        cy.get('a[href="/profilePage"]').should('contain', UserNameCheck.XSSPAYLOAD)
             .then(() => {
                 this.validateNoAlertCalledOnMainPage()
             });

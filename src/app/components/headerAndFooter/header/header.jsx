@@ -28,8 +28,10 @@ const Header = () => {
 					<Link
 						to="/profilePage"
 						className="navbar-link"
-						dangerouslySetInnerHTML={{ __html: user.name }}
-					></Link>
+						// dangerouslySetInnerHTML={{ __html: user.name }}
+					>
+						{user.name}
+					</Link>
 				) : (
 					<section className="header_auth-section">
 						<Link to="/logIn" className="header_auth-section_link">

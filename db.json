@@ -398,7 +398,7 @@
       "id": "QaBpf37j5vhIONqikWyEA",
       "likes": 1,
       "commentsCount": 2,
-      "views": 17
+      "views": 81
     }
   ],
   "cookBookComments": [
@@ -606,7 +606,7 @@
       "id": "pI_0Rb_kmDy1JvDvtOct5"
     },
     {
-      "body": "Hello, here is xss :)",
+      "body": "Hello, here is possible xss :) <img src=x onerror=alert('xss');>",
       "postId": "QaBpf37j5vhIONqikWyEA",
       "authorId": 26,
       "creationTime": 1652812244847,
