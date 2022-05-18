@@ -28,7 +28,10 @@ const SingleComment = ({ comment }) => {
 			</div>
 			<div className="single-comment-content">
 				<div className="single-comment-content-info">
-					<h4 className="single-comment-content-info_author">{authorName}</h4>
+					<h4
+						className="single-comment-content-info_author"
+						dangerouslySetInnerHTML={{ __html: authorName }}
+					/>
 					<span className="single-comment-content-info_time">{createdAt}</span>
 				</div>
 				<p className="single-comment-content-text">{body}</p>

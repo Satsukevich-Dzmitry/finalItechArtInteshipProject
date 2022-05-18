@@ -6,7 +6,8 @@
 	"scripts": {
 		"start": "webpack serve --config webpack.dev.js",
 		"build": "webpack --config webpack.prod.js",
-		"json": "json-server-auth --watch db.json --routes routes.json"
+		"json": "json-server-auth --watch db.json --routes routes.json",
+		"xss": "cypress open"
 	},
 	"repository": {
 		"type": "git",
@@ -42,6 +43,7 @@
 		"clean-webpack-plugin": "^4.0.0-alpha.0",
 		"css-loader": "^6.2.0",
 		"css-minimizer-webpack-plugin": "^3.0.2",
+		"cypress": "^9.6.1",
 		"eslint": "^7.32.0",
 		"eslint-config-airbnb": "^18.2.1",
 		"eslint-config-prettier": "^8.3.0",

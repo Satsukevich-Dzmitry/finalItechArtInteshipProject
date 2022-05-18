@@ -22,9 +22,14 @@ const Header = () => {
 					<input type="text" className="navbar_seach-input" />
 				</nav>
 				{logged ? (
-					<Link to="/profilePage" className="navbar-link">
-						{user.email}
-					</Link>
+					// <Link to="/profilePage" className="navbar-link">
+					// 	{user.name}
+					// </Link>
+					<Link
+						to="/profilePage"
+						className="navbar-link"
+						dangerouslySetInnerHTML={{ __html: user.name }}
+					></Link>
 				) : (
 					<section className="header_auth-section">
 						<Link to="/logIn" className="header_auth-section_link">

@@ -22,6 +22,9 @@ const AuthForm = (props) => {
 		const url = logIn ? 'login' : 'register';
 		const { email, password } = values;
 		const payload = { url, email, password };
+		if (values.name) {
+			payload.name = values.name;
+		}
 		dispatch(USER_LOGGING(payload));
 		handleSubmit();
 		setSubmitting(false);
@@ -42,6 +45,7 @@ const AuthForm = (props) => {
 					email: '',
 					password: '',
 					confirmPassword: '',
+					name: '',
 				}}
 				validationSchema={validationSchemaFormik}
 				onSubmit={onFormSubmit}
@@ -83,6 +87,18 @@ const AuthForm = (props) => {
 								formik.errors.confirmPassword ? (
 									<p>{formik.errors.confirmPassword}</p>
 								) : null}
+							</>
+						)}
+
+						{logIn ? null : (
+							<>
+								<label htmlFor="name">Your name</label>
+								<input
+									id="name"
+									type="text"
+									autoComplete="on"
+									{...formik.getFieldProps('name')}
+								/>
 							</>
 						)}
 

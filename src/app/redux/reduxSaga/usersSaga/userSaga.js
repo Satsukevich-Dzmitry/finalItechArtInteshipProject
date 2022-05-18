@@ -40,6 +40,9 @@ function* userBookLiked({ payload }) {
 function* userLogInSaga({ payload }) {
 	const { email, password, url } = payload;
 	const fetchBody = { email, password };
+	if (payload.name) {
+		fetchBody.name = payload.name;
+	}
 	const payloadToAction = yield call(fetchUsers, url, fetchBody);
 	yield put(USER_LOGGED(payloadToAction));
 }
